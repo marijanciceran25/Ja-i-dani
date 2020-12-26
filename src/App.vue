@@ -38,11 +38,27 @@
   </b-navbar>
 </div>
   </div>
-  <Kartica></Kartica>
+  <b-container class="bv-example-row" fluid="md">
+    <b-row>
+    <b-col>
+    <Kartica v-for="kartica in kartice" :key="kartica" :info="kartica">
+    </Kartica>
+    </b-col>
+    </b-row>
+</b-container>
+  
   </div>
 </template>
 
 <script>
+let kartice = []
+
+kartice = [
+  "https://storage.glasistre.hr/MediaServer/Photos/Download/90513?Format=1",
+  "https://www.pulacroatia.net/wp-content/uploads/2015/07/Culture-center-Rojc-Pula-1.jpg",
+  "https://www.maris.hr/site_media/media/realestate/watermarked/Veruda_igralisteimmobilien_in_croatia1-4.jpg.1280x800_q92.jpg"
+
+]
 
 import Kartica from './components/Kartica.vue';
 
@@ -51,15 +67,12 @@ export default {
    components: {
       "Kartica": Kartica,
    },
-data() { // skraćeno od "data: function() {"
- return {
-    cards: [
-    "https://picsum.photos/id/1/400/400",
-    "https://picsum.photos/id/2/400/400",
-    "https://picsum.photos/id/3/400/400"
-            ]
-     }
- },
+    data: function() {
+     return {
+       kartice: kartice,
+     };
+   },
+
 };
 </script>
 
@@ -87,4 +100,6 @@ data() { // skraćeno od "data: function() {"
 .stil{
   background-color:#044ca4 !important;
 }
+
+
 </style>

@@ -5,9 +5,9 @@
     title="Parking Karolina"
     img-alt="Image"
     img-top
-    img-src="https://lh3.googleusercontent.com/-KCRGBktjbdI/WUU5rGn2q2I/AAAAAAAAYZU/RSDEChXuNd0dpbR6Ii9C8HWQKqAc-ozCQCLIBGAYYCw/w1080-h608-p-k-no-v0/"
+    :img-src="info"
     tag="article"
-    style="max-width: 48rem"
+    style="max-width: 40rem"
     class="mb-2"
   >
   </b-card>
@@ -16,8 +16,12 @@
 </template>
 
 <script>
+
+
 export default {
+  props: ["info"],
    name: "Kartica",
+  
 };
 
 </script>
