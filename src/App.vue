@@ -44,6 +44,7 @@
     <Kartica v-for="kartica in kartice" :key="kartica" :info="kartica">
     </Kartica>
     </b-col>
+  
     </b-row>
 </b-container>
   
@@ -54,9 +55,12 @@
 let kartice = []
 
 kartice = [
-  "https://storage.glasistre.hr/MediaServer/Photos/Download/90513?Format=1",
-  "https://www.pulacroatia.net/wp-content/uploads/2015/07/Culture-center-Rojc-Pula-1.jpg",
-  "https://www.maris.hr/site_media/media/realestate/watermarked/Veruda_igralisteimmobilien_in_croatia1-4.jpg.1280x800_q92.jpg"
+  {url: 'https://storage.glasistre.hr/MediaServer/Photos/Download/90513?Format=1',
+  naslov: 'Parking Titov Park'},
+  {url: 'https://www.pulacroatia.net/wp-content/uploads/2015/07/Culture-center-Rojc-Pula-1.jpg',
+  naslov: 'Parking Rojc'},
+  {url: 'https://www.maris.hr/site_media/media/realestate/watermarked/Veruda_igralisteimmobilien_in_croatia1-4.jpg.1280x800_q92.jpg',
+  naslov: 'Parking Tržnica'}
 
 ]
 
