@@ -8,3 +8,12 @@
     <a href="@/public/index.html">Ovdje Klikni!</a>
   </div>
 </template>
+
+<script>
+export default {
+  
+}
+</script>
+
+<style scoped>
+</style>

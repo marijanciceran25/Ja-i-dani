@@ -130,7 +130,12 @@ export default {
   }
   .site-footer .copyright-text,.site-footer
   {
-    text-align:center
+    text-align:center;
   }
+}
+.col-md-3
+{
+  flex: 1;
+  max-width: 100%;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="upperapp"> 
-  <Dobrodoslica>jeah</Dobrodoslica>
+  <Dobrodoslica></Dobrodoslica>
   <b-navbar toggleable="lg" type="dark" class="stil">
     <b-navbar-brand href="@/views/App.vue">Park Finder</b-navbar-brand>
 
@@ -43,7 +43,6 @@
     <Kartica v-for="kartica in kartice" :key="kartica" :info="kartica">
     </Kartica>
     </b-col>
-  
     </b-row>
 </b-container>
   <Footer></Footer>
@@ -54,16 +53,21 @@
 let kartice = []
 
 kartice = [
-  {url: 'https://lh3.googleusercontent.com/proxy/1UAUIEBeOPwDDTWof8k4bngrXgiV6dYUtU7Mawcr1GiJFu8HO_u__sWQCWv8Evyehhr4U666ZPl8_z2MdT3WYun2GNWD9q6wXWGzLtjLm2cp2zFPkGgdmXJNMg',
-  naslov: 'Parking Rojc'},
+  {url: 'https://lh3.googleusercontent.com/proxy/yj26ODO7OIUCGkj_ysgheZJNZAwBiAY09IWywVOXG4eD2FjIUEeyPqzSF89xYJA-FEf5Psy2Ma70vd-_hENpTL0FSrL-SBMGn72yzzxBAOxuzWWJRTUryu-HvA',
+  naslov: 'Parking Rojc',
+  },
   {url: 'https://storage.glasistre.hr/MediaServer/Photos/Download/90513?Format=1',
-  naslov: 'Parking Titov Park'},
+  naslov: 'Parking Titov Park',
+  },
   {url: 'https://www.maris.hr/site_media/media/realestate/watermarked/Veruda_igralisteimmobilien_in_croatia1-4.jpg.1280x800_q92.jpg',
-  naslov: 'Parking Tržnica'},
-  {url: 'https://lh3.googleusercontent.com/proxy/wZiQ3uc6GimBKdIXW8la0q3eWkWMnvdmA0oAONqiHepjSgQ-V1PkXRG2lrkafclhDp0D5jxHkqHHlv7av4IgbfyOnEQCxyx7L_3W6fWTNNP9w5lSrOEP4z6_ZgRkzuwsZus3qG73Oo3P34zc1air68vBACR8FbdN7KM_',
-  naslov: 'Parking Dobrićeva'},
+  naslov: 'Parking Tržnica',
+  },
+  {url: 'https://lh3.googleusercontent.com/proxy/qlyvbauUem6tJFeIHIsqI1hacWzIGd6EiCRiBujaktx_WOY8PYBDvQV560cW3EjbvorTrTIKhzy-PpWe3soWJnZ5gzBbzlWfLUm83Jrvt3cpB83GPflxRaLt7xGbPZlY9MbmNC6r_HTga1lCMQW-p40YRvsYTME',
+  naslov: 'Parking Dobrićeva',
+  },
   {url: 'https://storage.glasistre.hr/MediaServer/Photos/Download/196799?Format=1',
-  naslov: 'Parking Drosina'}
+  naslov: 'Parking Drosina'
+  }
 ]
 
 import Kartica from './components/Kartica.vue';

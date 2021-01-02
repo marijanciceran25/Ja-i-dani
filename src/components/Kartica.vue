@@ -1,6 +1,6 @@
 <template>
     <div>
-    <center>
+    <center> 
  <b-card
     img-alt="Image"
     img-top
@@ -11,18 +11,15 @@
   >
   <b-card-title>{{info.naslov}}</b-card-title>
  </b-card>
-  
-    </center>
+  </center>
 </div>
 </template>
-
 <script>
 
 
 export default {
   props: ["info"],
    name: "Kartica",
-  
 };
 
 </script>
