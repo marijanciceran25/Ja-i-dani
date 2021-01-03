@@ -1,4 +1,5 @@
 <template>
+
  <b-container class="bv-example-row" fluid="md">
     <b-row>
     <b-col>
@@ -16,9 +17,11 @@ kartice = [
   { 
   url: '@/assets/Tržnica.jpg',
   naslov: 'Parking Rojc',
+  router: '/rojc'
   },
   {url: 'https://storage.glasistre.hr/MediaServer/Photos/Download/90513?Format=1',
   naslov: 'Parking Titov Park',
+  router: '/about'
   },
   {url: 'https://www.maris.hr/site_media/media/realestate/watermarked/Veruda_igralisteimmobilien_in_croatia1-4.jpg.1280x800_q92.jpg',
   naslov: 'Parking Tržnica',
@@ -34,7 +37,7 @@ kartice = [
 import Kartica from '@/components/Kartica.vue';
 
 export default {
-    name: "Pocetna",
+    name: "Home",
     components: {
         "Kartica": Kartica,
     },
@@ -46,6 +49,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+
 
 </style>

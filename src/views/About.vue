@@ -15,5 +15,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+.about {
+  background-color: brown;
+}
 </style>

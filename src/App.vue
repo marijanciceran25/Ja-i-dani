@@ -1,11 +1,13 @@
 <template>
   <div id="app">
+    
     <div class="upperapp"> 
   <Dobrodoslica></Dobrodoslica>
   <Navbar></Navbar>
   </div>
-  <Pocetna></Pocetna>
+  <router-view/>
   <Footer></Footer>
+  
   </div>
 </template>
 
@@ -14,15 +16,16 @@
 import Dobrodoslica from './views/Dobrodoslica.vue';
 import Footer from './components/Footer.vue';
 import Navbar from '@/components/Navbar.vue';
-import Pocetna from './views/Pocetna.vue';
+
+
 
 export default {
    name: "App.vue",
    components: {
-      Pocetna,
+      
       Dobrodoslica,
       Footer,
-      Navbar
+      Navbar,
    },
 
 };

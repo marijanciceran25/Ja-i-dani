@@ -1,28 +1,31 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Dobrodoslica from "../views/Dobrodoslica.vue";
-import Navbar from "../components/Navbar.vue";
+import Rojc from "@/views/Rojc.vue";
+import Home from "../views/Home.vue";
+
+
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: "/",
-    name: "Dobrodoslica",
-    component: Dobrodoslica
-  },
+ 
   {
     path: "/about",
-    name: "About"
+    name: "About",
+    component: () =>
+    import("../views/About.vue")
+  },
+ 
+  {
+    path: "/",
+    name: "Home",
+    component: Home
   },
   {
-    path: "/navbar",
-    name: "Navbar",
-    component: Navbar
-  },
-  {
-    path: "/pocetna",
-    name: "Pocetna"
+    path:"/rojc",
+    name: "Rojc",
+    component: Rojc
   }
+  
 ];
 
 const router = new VueRouter({

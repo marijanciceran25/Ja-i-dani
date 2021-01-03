@@ -1,6 +1,7 @@
 <template>
     <div>
     <center> 
+ <router-link :to="{path: info.router}">     
  <b-card
     img-alt="Image"
     img-top
@@ -11,6 +12,8 @@
   >
   <b-card-title>{{info.naslov}}</b-card-title>
  </b-card>
+ </router-link>
+ 
   </center>
 </div>
 </template>
@@ -26,8 +29,8 @@ export default {
 <style scoped>
 .mb-2, .my-2 {
     margin-bottom: 2.5rem !important;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     margin-top: 1rem !important;
 }
 .mb-2 {
