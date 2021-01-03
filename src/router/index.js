@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Dobrodoslica from "../views/Dobrodoslica.vue";
-
+import Navbar from "../components/Navbar.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -13,6 +13,15 @@ const routes = [
   {
     path: "/about",
     name: "About"
+  },
+  {
+    path: "/navbar",
+    name: "Navbar",
+    component: Navbar
+  },
+  {
+    path: "/pocetna",
+    name: "Pocetna"
   }
 ];
 

@@ -16,7 +16,6 @@
 </template>
 <script>
 
-
 export default {
   props: ["info"],
    name: "Kartica",
