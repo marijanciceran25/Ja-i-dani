@@ -24,7 +24,7 @@
          <!-- Search form -->
           <input class="form-control" type="text" placeholder="Search" aria-label="Search">
         </b-nav-form>
-
+        <hr>
         <b-nav-item-dropdown text="Jezik" right>
           <b-dropdown-item href="#">HRV</b-dropdown-item>
           <b-dropdown-item href="#">ENG</b-dropdown-item>
@@ -46,7 +46,6 @@ export default {
 
 </script>
 
-
 <style scoped>
 
 #nav {
@@ -64,5 +63,14 @@ export default {
 
 .stil{
   background-color:#044ca4 !important;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color: black;
+  height: 1px;
 }
 </style>

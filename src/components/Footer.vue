@@ -25,9 +25,7 @@ Naša aplikacija bi bila komplementarna tradicionalnim sustavima za plaćanje pa
         <hr>
       </div>
       <div class="container">
-          <div>
             <center> <p>Copyright &copy; Park Finder 2020. Sva prava pridržana. </p> </center>
-          </div>
         </div>
 </footer>
 </template>
@@ -44,7 +42,7 @@ export default {
 .site-footer
 {
   background-color:#26272b;
-  padding:45px 0 20px;
+  padding:30px 0 10px;
   font-size:15px;
   line-height:24px;
   color:#737373;

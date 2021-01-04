@@ -15,7 +15,7 @@ let kartice = []
 
 kartice = [
   { 
-  url: '@/assets/Tržnica.jpg',
+  url: 'https://www.pulainfo.hr/wp/wp-content/uploads/2017/10/AKCIJA_ZA_ROJC_7.jpg',
   naslov: 'Parking Rojc',
   router: '/rojc'
   },
@@ -26,7 +26,7 @@ kartice = [
   {url: 'https://www.maris.hr/site_media/media/realestate/watermarked/Veruda_igralisteimmobilien_in_croatia1-4.jpg.1280x800_q92.jpg',
   naslov: 'Parking Tržnica',
   },
-  {url: 'https://lh3.googleusercontent.com/proxy/qlyvbauUem6tJFeIHIsqI1hacWzIGd6EiCRiBujaktx_WOY8PYBDvQV560cW3EjbvorTrTIKhzy-PpWe3soWJnZ5gzBbzlWfLUm83Jrvt3cpB83GPflxRaLt7xGbPZlY9MbmNC6r_HTga1lCMQW-p40YRvsYTME',
+  {url: 'https://circontrol.com/wp-content/uploads/2019/02/180125-Circontrol-BAIXA-80-1080x675.jpg',
   naslov: 'Parking Dobrićeva',
   },
   {url: 'https://storage.glasistre.hr/MediaServer/Photos/Download/196799?Format=1',
