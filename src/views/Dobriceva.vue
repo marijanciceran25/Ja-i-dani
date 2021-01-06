@@ -1,6 +1,6 @@
 <template>
-<div class="Rojc">
-    <h1>Rojc stranica</h1>
+<div class="Dobriceva">
+    <h1>Dobriceva stranica</h1>
     <br>
     <br>
     <center>
@@ -15,12 +15,12 @@
 
 <script>
 export default {
-    name: "Rojc",
+    name: "Dobriceva",
 };
 </script>
 <style>
-.Rojc {
-    background-color: brown;
+.Titov {
+    background-color: orange;
 }
 .proba {
     color: black;

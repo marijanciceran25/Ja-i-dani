@@ -21,16 +21,19 @@ kartice = [
   },
   {url: 'https://storage.glasistre.hr/MediaServer/Photos/Download/90513?Format=1',
   naslov: 'Parking Titov Park',
-  router: '/about'
+  router: '/titov'
   },
   {url: 'https://www.maris.hr/site_media/media/realestate/watermarked/Veruda_igralisteimmobilien_in_croatia1-4.jpg.1280x800_q92.jpg',
   naslov: 'Parking Tržnica',
+  router: '/trznica'
   },
   {url: 'https://circontrol.com/wp-content/uploads/2019/02/180125-Circontrol-BAIXA-80-1080x675.jpg',
   naslov: 'Parking Dobrićeva',
+  router: '/dobriceva'
   },
   {url: 'https://storage.glasistre.hr/MediaServer/Photos/Download/196799?Format=1',
-  naslov: 'Parking Drosina'
+  naslov: 'Parking Drosina',
+  router: '/drosina'
   }
 ]
 
@@ -50,6 +53,4 @@ export default {
 </script>
 
 <style>
-
-
 </style>

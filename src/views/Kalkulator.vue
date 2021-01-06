@@ -1,26 +1,27 @@
 <template>
-<div class="Rojc">
-    <h1>Rojc stranica</h1>
+<div class="Kalkulator">
+    <h1>Kalkulator stranica</h1>
     <br>
     <br>
-    <center>
     <b-row class="proba">
         <b-col>
         <b-text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis fuga error. Excepturi mollitia aspernatur, aliquid aut alias voluptate reprehenderit?</b-text>
-        </b-col>
+       <p style="color: black">Danas je 6.1.2020.</p>
+       <hr>
+       <p style="color: black">Danas je 7.1.2020.</p>
+        </b-col> 
         </b-row>
-    </center>    
 </div>   
 </template>
 
 <script>
 export default {
-    name: "Rojc",
+    name: "Kalkulator",
 };
 </script>
 <style>
-.Rojc {
-    background-color: brown;
+.Kalkulator {
+    background-color: yellow;
 }
 .proba {
     color: black;

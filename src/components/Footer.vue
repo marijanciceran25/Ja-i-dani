@@ -16,9 +16,9 @@ Naša aplikacija bi bila komplementarna tradicionalnim sustavima za plaćanje pa
           <div class="col-xs-6 col-md-3">
             <h6>Kategorije</h6>
             <ul class="footer-links">
-              <li><a href="http://scanfcode.com/category/c-language/">Mapa</a></li>
-              <li><a href="http://scanfcode.com/category/front-end-development/">Lista Parkinga</a></li>
-              <li><a href="http://scanfcode.com/category/back-end-development/">Kalkulator</a></li>
+              <li><a href="/mapa">Mapa</a></li>
+              <li><a href="/">Lista Parkinga</a></li>
+              <li><a href="/kalkulator">Kalkulator</a></li>
             </ul>
           </div>
         </div>
@@ -113,14 +113,14 @@ export default {
 {
   margin:0;
 }
-@media (max-width:991px)
+@media (max-width: 1500px;)
 {
   .site-footer [class^=col-]
   {
     margin-bottom:30px
   }
 }
-@media (max-width:767px)
+@media (max-width: 1200px;)
 {
   .site-footer
   {
