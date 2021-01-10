@@ -4,11 +4,14 @@
   <p style="color: white; padding: 15px;"> Dobro došli u Park Finder!</p>
   </div>
 </template>
-<script>
-// @ is an alias to /src
 
+<script>
 
 export default {
    name: "Dobrodoslica",
 };
 </script>
+
+<style scoped>
+
+</style>

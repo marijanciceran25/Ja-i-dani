@@ -2,15 +2,25 @@
 <div class="Kalkulator">
     <h1>Kalkulator stranica</h1>
     <br>
-    <br>
-    <b-row class="proba">
-        <b-col>
-        <b-text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis fuga error. Excepturi mollitia aspernatur, aliquid aut alias voluptate reprehenderit?</b-text>
-       <p style="color: black">Danas je 6.1.2020.</p>
-       <hr>
-       <p style="color: black">Danas je 7.1.2020.</p>
-        </b-col> 
-        </b-row>
+<b-dropdown id="dropdown-1" text="Odaberite parking" class="m-md-2">
+    <b-dropdown-item>Parking Rojc</b-dropdown-item>
+    <b-dropdown-item>Parking Titov Park</b-dropdown-item>
+    <b-dropdown-item>Parking Tržnica</b-dropdown-item>
+    <b-dropdown-item>Parking Dobrićeva</b-dropdown-item>
+    <b-dropdown-divider></b-dropdown-divider>
+    <!-- Disabled dio - u smislu parkinga koji je zatvoren ili pun?? -->
+    <b-dropdown-item disabled>Parking Drosina</b-dropdown-item>
+  </b-dropdown>
+  <br>
+  <hr>
+  <b-dropdown id="dropdown-1" text="Odaberite vrijeme" class="m-md-2">
+    <b-dropdown-item>1 sat</b-dropdown-item>
+    <b-dropdown-item>2 sata</b-dropdown-item>
+    <b-dropdown-item>3 sata</b-dropdown-item>
+    <b-dropdown-item>4 sata</b-dropdown-item>
+    <b-dropdown-item>5 sati</b-dropdown-item>
+    <b-dropdown-item>Dnevna</b-dropdown-item>
+  </b-dropdown>
 </div>   
 </template>
 
@@ -19,12 +29,18 @@ export default {
     name: "Kalkulator",
 };
 </script>
+
 <style>
+
 .Kalkulator {
     background-color: yellow;
 }
 .proba {
     color: black;
     font-weight: bold;
+}
+
+.mimi{
+    color: black;
 }
 </style>
