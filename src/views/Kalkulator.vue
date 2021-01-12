@@ -1,42 +1,50 @@
 <template>
   <div class="kalkulator">
-    <b-form-select v-model="selected" :options="options"></b-form-select>
-    <br>
-    <br>
-    <b-form-select v-model="izabrano" :options="opcije"></b-form-select>
 
-    <div class="mt-3"> <strong>{{ selected }}</strong></div>
-    <div class="mt-3"> <strong>{{ izabrano }}</strong></div>
+    <input :value="form.sale_quantity" @change="updateQuantity" type="number" class="form-control" name="sale_quantity" id="sale_quantity" placeholder="Quantity">
+  <input :value="form.sale_rate" @change="updateRate" type="number" step="any" class="form-control" name="sale_rate" id="sale_rate" placeholder="Rate">
+  <input v-model="form.sale_total" type="number" step="any" class="form-control" name="sale_total" id="sale_total" placeholder="Total Price">
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <h2 class="kurac">Boze pomozi</h2>
+
+    
   </div>
 </template>
 
 
 
 <script>
+
 export default {
     name: "Kalkulator",
-     data() {
-      return {
-        selected: null,
-        options: [
-          { value: null, text: 'Odaberite parking' },
-          { value: 'Cijena po satu 6kn', text: 'Parking Rojc' },
-          { value: 'Cijena po satu 5kn', text: 'Parking Tržnica' },
-          { value: 'Cijena po satu 5kn', text: 'Parking Tržnica' },
-          { value: 'Cijena po satu 5kn', text: 'Parking City max (popunjen)', disabled: true }
-        ],
-        izabrano: null,
-        opcije: [
-          { value: null, text: 'Odaberite parking' },
-          { value: 'Cijena po satu 6kn', text: '1 sat' },
-          { value: 'Cijena po satu 5kn', text: '2 sata' },
-          { value: 'Cijena po satu 5kn', text: '3 sata' },
-          { value: 'Cijena po satu 5kn', text: '4 sata'},
-          { value: 'Cijena po satu 5kn', text: '5 sati' },
-          { value: 'Cijena po satu 5kn', text: 'dnevna karta' }
-        ],
+    data() {
+        return {
+            
+        form: {
+        sale_quantity: 0,
+        sale_rate: 0,
+        sale_total: 0
       }
     }
+
+},
+ methods: {
+    updateQuantity(event) {
+        this.form.sale_quantity = event.target.value
+        this.form.sale_total = this.form.sale_quantity * this.form.sale_rate
+      },
+      updateRate(event) {
+        this.form.sale_rate = event.target.value
+        this.form.sale_total = this.form.sale_quantity * this.form.sale_rate
+      }
+  }
+
+    
+      
+  
 };
 </script>
 
@@ -61,5 +69,8 @@ export default {
 .custom-select {
     width: 20% !important;
     
+}
+.kurac {
+  color: aliceblue;
 }
 </style>
