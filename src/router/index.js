@@ -8,7 +8,7 @@ import Dobriceva from "@/views/Dobriceva.vue";
 import Drosina from "@/views/Drosina.vue";
 import Mapa from "@/views/Mapa.vue";
 import Kalkulator from "@/views/Kalkulator.vue";
-
+import Obavijesti from "@/views/Obavijesti.vue";
 
 Vue.use(VueRouter);
 
@@ -59,6 +59,11 @@ const routes = [
     path: "/kalkulator",
     name: "Kalkulator",
     component: Kalkulator
+  },  
+  {
+    path: "/obavijesti",
+    name: "Obavijesti",
+    component: Obavijesti
   },  
 ];
 
