@@ -35,7 +35,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
-  background-image: linear-gradient(to bottom, #020024, #00114a, #001873, #001c9d, #001ac7, #001ac7, #001ac7, #001ac7, #001c9d, #001873, #00114a, #020024);
 }
 
 .upperapp
