@@ -1,13 +1,9 @@
 <template>
-
- <b-container class="bv-example-row" fluid="md">
-    <b-row>
-    <b-col>
-    <Kartica v-for="kartica in kartice" :key="kartica" :info="kartica">
-    </Kartica>
-    </b-col>
-    </b-row>
-</b-container>
+    <b-container class="bv-example-row" fluid="md">
+        <b-col>
+            <Kartica v-for="kartica in kartice" :key="kartica" :info="kartica"></Kartica>
+        </b-col>
+    </b-container>
 </template>
 
 <script>
@@ -15,19 +11,19 @@ let kartice = []
 
 kartice = [
   { 
-  url: 'https://www.pulainfo.hr/wp/wp-content/uploads/2017/10/AKCIJA_ZA_ROJC_7.jpg',
+  url: 'https://storage.glasistre.hr/MediaServer/Photos/Download/81904?Format=1',
   naslov: 'Parking Rojc',
   router: '/rojc'
   },
   {url: 'https://storage.glasistre.hr/MediaServer/Photos/Download/90513?Format=1',
-  naslov: 'Parking Titov Park',
-  router: '/titov'
+  naslov: 'Parking Karolina',
+  router: '/karolina'
   },
   {url: 'https://www.maris.hr/site_media/media/realestate/watermarked/Veruda_igralisteimmobilien_in_croatia1-4.jpg.1280x800_q92.jpg',
   naslov: 'Parking Tržnica',
   router: '/trznica'
   },
-  {url: 'https://circontrol.com/wp-content/uploads/2019/02/180125-Circontrol-BAIXA-80-1080x675.jpg',
+  {url: 'https://cdn.discordapp.com/attachments/465282681622757399/806587488574505000/unknown.png',
   naslov: 'Parking Dobrićeva',
   router: '/dobriceva'
   },
@@ -44,7 +40,7 @@ export default {
     components: {
         "Kartica": Kartica,
     },
-        data: function() {
+    data: function() {
         return {
         kartice: kartice
         };
@@ -53,4 +49,5 @@ export default {
 </script>
 
 <style>
+
 </style>

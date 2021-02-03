@@ -1,6 +1,6 @@
 <template>
-<div class="Mapa">
-    <h1>Mapa stranica</h1>
+<div class="Karolina">
+    <h1>Karolina stranica</h1>
     <br>
     <br>
     <center>
@@ -15,12 +15,12 @@
 
 <script>
 export default {
-    name: "Mapa",
+    name: "Karolina",
 };
 </script>
 <style>
-.Mapa {
-    background-color: turquoise;
+.Karolina {
+    background-color: red;
 }
 .proba {
     color: black;

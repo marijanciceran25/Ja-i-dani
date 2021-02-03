@@ -1,8 +1,8 @@
 <template>
-<div class="Titov">
-    <h1>Titov stranica</h1>
-    <br>
-    <br>
+<div class="Mapa">
+<h1>Mapa stranica</h1>
+<br>
+<br>
     <center>
     <b-row class="proba">
         <b-col>
@@ -15,12 +15,12 @@
 
 <script>
 export default {
-    name: "Titov",
+    name: "Mapa",
 };
 </script>
 <style>
-.Titov {
-    background-color: red;
+.Mapa {
+    background-color: turquoise;
 }
 .proba {
     color: black;

@@ -2,11 +2,11 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Rojc from "@/views/Rojc.vue";
-import Titov from "@/views/Titov.vue";
+import Karolina from "@/views/Karolina.vue";
 import Trznica from "@/views/Trznica.vue";
 import Dobriceva from "@/views/Dobriceva.vue";
 import Drosina from "@/views/Drosina.vue";
-import Mapa from "@/views/Mapa.vue";
+import Karta from "@/views/Karta.vue";
 import Kalkulator from "@/views/Kalkulator.vue";
 import Obavijesti from "@/views/Obavijesti.vue";
 
@@ -31,9 +31,9 @@ const routes = [
     component: Rojc
   },
   {
-    path: "/titov",
-    name: "Titov",
-    component: Titov
+    path: "/karolina",
+    name: "Karolina",
+    component: Karolina
   }, 
   {
     path: "/trznica",
@@ -51,9 +51,9 @@ const routes = [
     component: Drosina
   },  
   {
-    path: "/mapa",
-    name: "Mapa",
-    component: Mapa
+    path: "/karta",
+    name: "MKarta",
+    component: Karta
   },  
   {
     path: "/kalkulator",
