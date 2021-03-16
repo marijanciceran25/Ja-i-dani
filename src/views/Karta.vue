@@ -1,8 +1,8 @@
 <template>
 <div class="Mapa">
-<h1>Mapa stranica</h1>
-<br>
-<br>
+    <h1>Mapa stranica</h1>
+    <br>
+    <br>
     <center>
     <b-row class="proba">
         <b-col>

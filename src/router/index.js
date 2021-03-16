@@ -13,13 +13,6 @@ import Obavijesti from "@/views/Obavijesti.vue";
 Vue.use(VueRouter);
 
 const routes = [
- 
-  {
-    path: "/about",
-    name: "About",
-    component: () =>
-    import("../views/About.vue")
-  },
   {
     path: "/",
     name: "Home",
@@ -52,7 +45,7 @@ const routes = [
   },  
   {
     path: "/karta",
-    name: "MKarta",
+    name: "Karta",
     component: Karta
   },  
   {
