@@ -9,7 +9,7 @@ import Drosina from "@/views/Drosina.vue";
 import Karta from "@/views/Karta.vue";
 import Kalkulator from "@/views/Kalkulator.vue";
 import Obavijesti from "@/views/Obavijesti.vue";
-
+import Sign_in from "@/views/Sign_in.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -58,6 +58,11 @@ const routes = [
     name: "Obavijesti",
     component: Obavijesti
   },  
+  {
+    path: "/sign_in",
+    name: "Sign_in",
+    component: Sign_in
+  },
 ];
 
 const router = new VueRouter({

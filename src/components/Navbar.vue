@@ -19,7 +19,8 @@
       <!-- Desna strana navbara -->
       <b-navbar-nav class="ml-auto">
         <hr>
-        <b-nav-item href="/obavijesti" img>Obavijesti</b-nav-item>
+        <b-nav-item class="Item-1" href="/obavijesti" img>Obavijesti</b-nav-item>
+        <b-nav-item class="Item-2" href="/sign_in" img>Prijava</b-nav-item>
         <b-nav-item-dropdown text="Jezik" right>
           <b-dropdown-item href="#">HRV</b-dropdown-item>
           <b-dropdown-item href="#">ENG</b-dropdown-item>
@@ -58,5 +59,16 @@ hr {
   width: 100%;               
   background-color: white;
   height: 1px;
+}
+.Item-1 {
+  padding-right:17% ;
+  
+}
+.Item-2 {
+  padding-right:10% ;
+  
+}
+.ml-auto {
+  padding-right: 5%;
 }
 </style>
