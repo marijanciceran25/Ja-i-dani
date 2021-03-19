@@ -3,15 +3,16 @@
         <div class="form_group">
             <div class="row">
                 <div class="col">
-            <b-card>
+            <b-card id="sign">
             <h3>Sign Up</h3>
 
             <div class="form-group">
-                <label>Email</label>
+                <label for="exampleInputEmail1">Email</label>
                 <input 
                     type="email"
+                    v-model="username"
                     class="form-control"
-                    id="exampleInputEmail"
+                    id="exampleInputEmail1"
                     aria-describedby="emailHelp" 
                     placeholder="Email"/>
             </div>
@@ -19,13 +20,23 @@
            
             <div class="form-group">
                 <label for="exampleInputPassword1">Lozinka</label>
-                <input type="password" class="form-control" placeholder="Lozinka" />
+                <input 
+                    type="password"
+                    v-model="password" 
+                    class="form-control" 
+                    id="exampleInputPassword1"
+                    placeholder="Lozinka" />
             </div>
             <br>
 
             <div class="form-group2">
                 <label for="exampleInputPassword2">Ponovite lozinku</label>
-                <input type="password" class="form-control" placeholder="Ponovite lozinku"/>
+                <input 
+                    type="password"
+                    v-model="passwordRepeat" 
+                    class="form-control"
+                    id="exampleInputPassword2"
+                    placeholder="Ponovite lozinku"/>
             </div>
             <br>
             <br>
@@ -38,7 +49,7 @@
             
             
 
-            <button class="btn btn-primary btn-block">Sign Up</button>
+            <b-button variant="danger" @click="signup">Sign Up</b-button>
             </b-card>
                 </div>
             </div>
@@ -47,9 +58,36 @@
 </template>
 
 <script>
+
+import { firebase } from '@/firebase';
+
 export default {
-    name: 'Sign_in'
-}
+    name: 'Signup',
+    data() {
+        return {
+            username: '',
+            password: '',
+            passwordRepeat:'',
+        };
+    },
+    methods: {
+        signup() {
+            firebase.auth().createUserWithEmailAndPassword(this.username, this.password)
+            .then(function() {
+                console.log('Uspješna registracija');
+
+                }
+            )
+            .catch(function(error) {
+                console.error("Došlo je do greške", error),
+                alert('Lozinka mora imati barem 6 znakova');
+            });
+            
+            console.log('Nastavak');
+
+        },
+    },
+};
 </script>
 
 
@@ -62,7 +100,7 @@ export default {
     height: 600px;
 }
 
-div.card-body {
+#sign {
     background-color: #044ca4;
     color: aliceblue;
     height: 600px;
@@ -77,5 +115,7 @@ div.card-body {
 div.card {
     border-radius: 10px;
 }
+ .btn {
 
+ }
 </style>

@@ -21,7 +21,7 @@
         <hr>
         <b-nav-item class="Item-1" href="/obavijesti" img>Obavijesti</b-nav-item>
         <b-nav-item class="Item-2" href="/sign_in" img>Prijava</b-nav-item>
-        <b-nav-item-dropdown text="Jezik" right>
+        <b-nav-item-dropdown class="jezik" text="Jezik" right>
           <b-dropdown-item href="#">HRV</b-dropdown-item>
           <b-dropdown-item href="#">ENG</b-dropdown-item>
           <b-dropdown-item href="#">ITA</b-dropdown-item>
@@ -61,14 +61,16 @@ hr {
   height: 1px;
 }
 .Item-1 {
-  padding-right:17% ;
+  padding-right:0 ;
+  
   
 }
 .Item-2 {
-  padding-right:10% ;
+  padding-right:0 ;
   
 }
 .ml-auto {
   padding-right: 5%;
 }
+
 </style>
