@@ -1,5 +1,10 @@
 <template>
 <div class="Trznica">
+    <Navbar></Navbar>
+    <br>
+    <br>
+    <br>
+    <br>
     <h1>Trznica stranica</h1>
     <br>
     <br>
@@ -14,8 +19,12 @@
 </template>
 
 <script>
+import Navbar from '@/components/Navbar.vue';
 export default {
     name: "Trznica",
+    components: {
+        Navbar
+    },
 };
 </script>
 <style>

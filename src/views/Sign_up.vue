@@ -4,10 +4,9 @@
            <Navsignup></Navsignup>
            <div class="form_group2">
             <b-card id="sign">
-            <h2>Prijava</h2>
+            <h2>Registracija</h2>
             <br>
             <br>
-
             <div class="form-group3">
                 <input 
                     type="email"
@@ -16,10 +15,12 @@
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp" 
                     placeholder="Email"/>
-                <label for="exampleInputEmail1">Email</label>
+                    <label for="exampleInputEmail1">Email</label>
             </div>
             <br>
-           <br>
+            <br>
+          
+           
             <div class="form-group4">
                 <input 
                     type="password"
@@ -30,17 +31,29 @@
                     <label for="exampleInputPassword1">Lozinka</label>
             </div>
             <br>
+            <br>
+           
 
+            <div class="form-group5">
+                
+                <input 
+                    type="password"
+                    v-model="passwordRepeat" 
+                    class="form-control"
+                    id="exampleInputPassword2"
+                    placeholder="Ponovite lozinku"/>
+                    <label for="exampleInputPassword2">Ponovite lozinku</label>
+            </div>
             <br>
             <br>
             
-          
-
-            <b-button class="btn" variant="danger" @click="signup">Sign Up</b-button>
+           
+            <b-button class="btn" variant="danger" @click="signup">Registriraj se</b-button>
             <br>
             <br>
             <br>
-            <b-button href="/sign_up">Nemate račun? Registrirajte se.</b-button>
+            
+            <b-button class="btn2" href="/">Već imam račun</b-button>
             </b-card>
            </div>
         </div>
@@ -56,7 +69,7 @@ import { firebase } from '@/firebase';
 import Navsignup from '../components/Navsignup.vue';
 
 export default {
-    name: 'Signin',
+    name: 'Signup',
     components: {
         Navsignup,
     
@@ -95,7 +108,7 @@ export default {
     
     border: none;
     background-color:rgb(63, 60, 60);
-    height: 660px;
+    
     
 }
 
@@ -103,14 +116,14 @@ export default {
    margin-left: 30%;
    margin-right: 30%;
 
+
 }
 
 #sign {
     background-color: #044ca4;
     color: aliceblue;
-    height: 600px;
+    max-height: 100%;
     border-radius: 10px;
-
     
   
     
@@ -121,21 +134,27 @@ div.card {
     border-radius: 10px;
     max-width:100%;
     
+    
 }
+ .col {
+    padding-left: 0%;
 
-.signin {
+ }
+
+.signup {
     color: aliceblue;
 }
 
-.form-group4 {
-    margin-left: 12%;
-    margin-right: 12%;
-}
 .form-group3 {
-    margin-left: 12%;
-    margin-right: 12%;
+    margin-left: 30%;
+    margin-right: 30%;
+
 }
 
+.form-group5 {
+    margin-left: 12%;
+    margin-right: 12%;
 
+}
  
 </style>

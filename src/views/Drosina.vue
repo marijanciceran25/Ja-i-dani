@@ -1,5 +1,9 @@
 <template>
 <div class="Drosina">
+    <Navbar></Navbar>
+    <br>
+    <br>
+    <br>
     <h1>Drosina stranica</h1>
     <br>
     <br>
@@ -14,8 +18,13 @@
 </template>
 
 <script>
+import Navbar from '@/components/Navbar.vue';
+
 export default {
     name: "Drosina",
+    components: {
+        Navbar
+    },
 };
 </script>
 <style>

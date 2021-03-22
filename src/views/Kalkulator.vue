@@ -1,6 +1,12 @@
 <template>
 <div class="bgkalkus">
   <div class="accordion" role="tablist">
+    <Navbar></Navbar>
+    <br>
+    <br>
+    <br>
+    <br>
+    
     <h4 style="padding-top:10px">Odaberite jedan od parkinga</h4>
     <p>*Napomena: zadržavanje više od 5 sati na određenom parkingu smatra se dnevnom kartom čija cijena je ista za svaki parking</p>
 
@@ -111,12 +117,17 @@
 </template>
 
 <script>
+import Navbar from '@/components/Navbar.vue';
+
   export default {
+    components: {
+      Navbar,
+    },
     data() {
       return {
         form: {
         quantity: null,
-        total: null
+        total: null,
       },
         selected: null,
         options: [

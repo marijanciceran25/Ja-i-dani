@@ -1,5 +1,11 @@
 <template>
 <div class="Mapa">
+    <Navbar></Navbar>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <h1>Mapa stranica</h1>
     <br>
     <br>
@@ -14,8 +20,13 @@
 </template>
 
 <script>
+import Navbar from '@/components/Navbar.vue';
+
 export default {
     name: "Mapa",
+    components: {
+        Navbar
+    },
 };
 </script>
 <style>

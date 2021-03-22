@@ -9,15 +9,17 @@ import Drosina from "@/views/Drosina.vue";
 import Karta from "@/views/Karta.vue";
 import Kalkulator from "@/views/Kalkulator.vue";
 import Obavijesti from "@/views/Obavijesti.vue";
+import Sign_up from "@/views/Sign_up.vue";
 import Sign_in from "@/views/Sign_in.vue";
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
+    path: "/home",
     name: "Home",
     component: Home
   },
+
   {
     path: "/rojc",
     name: "Rojc",
@@ -59,10 +61,15 @@ const routes = [
     component: Obavijesti
   },  
   {
-    path: "/sign_in",
-    name: "Sign_in",
-    component: Sign_in
+    path: "/sign_up",
+    name: "Sign_up",
+    component: Sign_up
   },
+{
+  path: "/",
+  name: "Sign_in",
+  component: Sign_in
+},
 ];
 
 const router = new VueRouter({

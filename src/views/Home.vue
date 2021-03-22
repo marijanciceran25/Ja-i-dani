@@ -1,9 +1,18 @@
 <template>
+
+<div class="nav1">
+    
+    <Navbar></Navbar>
+    <br>
+    <br>
+    <br>
     <b-container class="bv-example-row" fluid="md">
+     
         <b-col>
-            <Kartica v-for="kartica in kartice" :key="kartica" :info="kartica"></Kartica>
+            <Kartica v-for="Kartica in kartice" :key="Kartica" :info="Kartica"></Kartica>
         </b-col>
     </b-container>
+</div>
 </template>
 
 <script>
@@ -34,15 +43,17 @@ kartice = [
 ]
 
 import Kartica from '@/components/Kartica.vue';
+import Navbar from '@/components/Navbar.vue';
 
 export default {
     name: "Home",
     components: {
-        "Kartica": Kartica,
+        Kartica,
+        Navbar,
     },
     data: function() {
         return {
-        kartice: kartice
+        kartice,
         };
     },
 };
@@ -50,4 +61,8 @@ export default {
 
 <style>
 
+.nav1 {
+    max-width: 100%;
+    
+}
 </style>
