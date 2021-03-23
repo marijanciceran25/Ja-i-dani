@@ -3,29 +3,22 @@
     <footer class="site-footer">
       <div class="container">
         <div class="row">
+          <center>
           <div class="col-sm-12 col-md-6">
             <h6>O nama</h6>
-            <p class="text-justify">
-Ovom aplikacijom želimo olakšati korisnicima pronalazak dostupnih parkirnih mjesta i njihove lokacije, omogućiti rezervaciju parkirnih mjesta, prikaz parkirnih zona, termin naplaćivanja određene parking zone u smislu naplaćivanja.
+            <p class="text-justify">Ovom aplikacijom želimo olakšati korisnicima pronalazak dostupnih parkirnih mjesta i njihove lokacije,  prikaz parkirnih zona uz termin naplaćivanja određene parking zone.
 Ova aplikacija će slati korisnicima obavijesti i prikazivati informacije o radnom vremenu i dostupnosti parkirnih zona/mjesta.
 Za razliku od klasičnih parking sustava koji služe samo za kupovinu karata, naš sustav ima mogućnost pronalaska, prikazivanja dostupnosti i lokaciju parking mjesta.
 Također, naša aplikacija ima mogućnost izračuna ukupnog vremena boravka na parkingu bez potrebe unošenja registracijske tablice korisnika. 
-Naša aplikacija bi bila komplementarna tradicionalnim sustavima za plaćanje parkinga. </p>
+Naša aplikacija bi bila komplementarna tradicionalnim sustavima za plaćanje parkinga. 
+</p>
           </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Kategorije</h6>
-            <ul class="footer-links">
-              <li><a href="/karta">Karta</a></li>
-              <li><a href="/">Lista Parkinga</a></li>
-              <li><a href="/kalkulator">Kalkulator</a></li>
-            </ul>
-          </div>
+          </center>
         </div>
         <hr>
       </div>
       <div class="container">
-            <center> <p>Copyright &copy; Park Finder 2020. Sva prava pridržana. </p> </center>
+            <center> <p>Copyright &copy; Park Finder 2021. Sva prava pridržana. </p> </center>
         </div>
 </footer>
 </template>
@@ -113,14 +106,14 @@ export default {
 {
   margin:0;
 }
-@media (max-width: 1500px;)
+@media (max-width: 1500px)
 {
   .site-footer [class^=col-]
   {
     margin-bottom:30px
   }
 }
-@media (max-width: 1200px;)
+@media (max-width: 1200px)
 {
   .site-footer
   {

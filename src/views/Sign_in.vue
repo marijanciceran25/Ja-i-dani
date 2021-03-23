@@ -1,5 +1,5 @@
 <template>
-
+<div>
         <div class="form_group1">
            <Navsignup></Navsignup>
            <div class="form_group2">
@@ -44,9 +44,7 @@
             </b-card>
            </div>
         </div>
-        
-      
-    
+</div>
 </template>
 
 <script>
@@ -116,10 +114,6 @@ export default {
     color: aliceblue;
     height: 600px;
     border-radius: 10px;
-
-    
-  
-    
 }
 
 div.card {

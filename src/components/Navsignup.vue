@@ -1,7 +1,9 @@
 <template>
 <div>
     <b-navbar toggleable="lg" type="dark" class="stil">
-     <h2>Parkfinder</h2>   
+    <img src=@/assets/P.png id="navbarP">
+    <b-navbar-brand href="/">Park Finder</b-navbar-brand>
+  
     
 
     <b-collapse id="nav-collapse" is-nav>
@@ -23,7 +25,7 @@
 
 <script>
 export default {
-  name: "Navsingup",  
+  name: "Navsignup",  
 };
 
 </script>
@@ -34,8 +36,6 @@ export default {
   height: 50px;
   padding-right:20px
 }
-
-
 
 .stil{
   background-color:#044ca4 !important;

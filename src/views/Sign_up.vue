@@ -53,7 +53,7 @@
             <br>
             <br>
             
-            <b-button class="btn2" href="/">Već imam račun</b-button>
+            <b-button class="btn2" href="/sign_in">Već imam račun</b-button>
             </b-card>
            </div>
         </div>
