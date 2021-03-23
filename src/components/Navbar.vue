@@ -2,7 +2,7 @@
 <div>
     <b-navbar toggleable="lg" type="dark" class="stil" fixed="top">
     <img src=@/assets/P.png id="navbarP">
-    <b-navbar-brand href="/home">Park Finder</b-navbar-brand>
+    <b-navbar-brand href="/">Park Finder</b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     
     <b-collapse id="nav-collapse" is-nav>
