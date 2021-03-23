@@ -10,8 +10,8 @@
 
             <div class="form-group3">
                 <input 
-                    type="email"
-                    v-model="username"
+                    type="email" 
+                    v-model="username" 
                     class="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp" 
@@ -23,7 +23,7 @@
             <div class="form-group4">
                 <input 
                     type="password"
-                    v-model="password" 
+                    v-model="password"
                     class="form-control" 
                     id="exampleInputPassword1"
                     placeholder="Lozinka" />
@@ -36,7 +36,7 @@
             
           
 
-            <b-button class="btn" variant="danger" @click="signup">Sign Up</b-button>
+            <b-button class="btn" type="submit" variant="danger" @click="login">Prijava</b-button>
             <br>
             <br>
             <br>
@@ -52,40 +52,46 @@
 <script>
 
 
-import { firebase } from '@/firebase';
+
 import Navsignup from '../components/Navsignup.vue';
+import {firebase} from '@/firebase';
 
 export default {
-    name: 'Signin',
+    name: 'Sign_in',
     components: {
         Navsignup,
     
     },
- 
-  data() {
+    
+    data() {
         return {
-            username: '',
-            password: '',
-            passwordRepeat:'',
-        };
+            username:"",
+            password:""
+        }
     },
     methods: {
-        signup() {
-            firebase.auth().createUserWithEmailAndPassword(this.username, this.password)
-            .then(function() {
-                console.log('Uspješna registracija');
-
+        login() {
+            console.log("login..." + this.username);
+            console.log(this.$router);
+            firebase.auth().signInWithEmailAndPassword(this.username, this.password)
+            .then((result)=> {
+                console.log('Uspješna prijava', result);
+                this.$router.replace({name: 'Home'});
+            })
+            .catch(function(e) {
+                console.error('Greška', e);
+                var errorCode = e.code;
+                var errorMessage = e.message;
+                if (errorCode === 'auth/wrong-password') {
+                    alert('Kriva lozinka.');
+                } else {
+                 alert(errorMessage);
                 }
-            )
-            .catch(function(error) {
-                console.error("Došlo je do greške", error),
-                alert('Lozinka mora imati barem 6 znakova');
+                console.log(e);
             });
-            
-            console.log('Nastavak');
-
         },
     },
+    
 };
 </script>
 
