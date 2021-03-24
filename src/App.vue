@@ -11,7 +11,8 @@
 
 import Footer from './components/Footer.vue';
 import {firebase} from '@/firebase';
-import router from '@/router';
+//import router from '@/router';
+
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
@@ -19,9 +20,13 @@ firebase.auth().onAuthStateChanged((user) => {
   } else {
     console.log('*** No user');
 
-    if (router.name !== "Sign_in") {
-      router.push({name: 'Sign_in'});
-    }
+    //if (router.name !== "Sign_in",  router.name !=="Sign_up") {
+      //router.push({name: 'Sign_in'});
+
+
+      
+    //}
+    
   }
 });
 

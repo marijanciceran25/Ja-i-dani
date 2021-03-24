@@ -55,7 +55,7 @@ import Navsignup from '../components/Navsignup.vue';
 import {firebase} from '@/firebase';
 
 export default {
-    name: 'Sign_in',
+    name1: 'Sign_in',
     components: {
         Navsignup,
     

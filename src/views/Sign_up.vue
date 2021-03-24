@@ -15,6 +15,7 @@
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp" 
                     placeholder="Email"/>
+                    <br>
                     <label for="exampleInputEmail1">Email</label>
             </div>
             <br>
@@ -28,13 +29,15 @@
                     class="form-control" 
                     id="exampleInputPassword1"
                     placeholder="Lozinka" />
+                    <br>
                     <label for="exampleInputPassword1">Lozinka</label>
             </div>
             <br>
-            <br>
+            
            
 
             <div class="form-group5">
+      
                 
                 <input 
                     type="password"
@@ -42,10 +45,16 @@
                     class="form-control"
                     id="exampleInputPassword2"
                     placeholder="Ponovite lozinku"/>
-                    <label for="exampleInputPassword2">Ponovite lozinku</label>
+                    <strong><label class="usporedba" for="passwordnotmatching">{{comparePasswords}}</label></strong>
+                    <br>
+                    <label class="label1" for="exampleInputPassword2">Ponovite lozinku</label>
+
+                    
+                    
+                    
+                                   
             </div>
-            <br>
-            <br>
+            
             
            
             <b-button class="btn" variant="danger" @click="signup">Registriraj se</b-button>
@@ -69,7 +78,7 @@ import { firebase } from '@/firebase';
 import Navsignup from '../components/Navsignup.vue';
 
 export default {
-    name: 'Signup',
+    name2: 'Sign_up',
     components: {
         Navsignup,
     
@@ -80,6 +89,7 @@ export default {
             username: '',
             password: '',
             passwordRepeat:'',
+           
         };
     },
     methods: {
@@ -98,6 +108,12 @@ export default {
             console.log('Nastavak');
 
         },
+    },
+
+    computed: {
+        comparePasswords () {
+            return this.password !== this.passwordRepeat ? 'Lozinka se ne podudara' : ''
+        }
     },
 };
 </script>
@@ -156,5 +172,17 @@ div.card {
     margin-right: 12%;
 
 }
- 
+.usporedba {
+    color: red;
+    font-size: 20px;
+    text-align: right;
+    margin-left: 67%;
+    
+}
+.label1 {
+    margin-left: 0%;
+}
+
+
+
 </style>
