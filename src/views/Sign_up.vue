@@ -46,7 +46,6 @@
                     id="exampleInputPassword2"
                     placeholder="Ponovite lozinku"/>
                     <strong><label class="usporedba" for="passwordnotmatching">{{comparePasswords}}</label></strong>
-                    <br>
                     <label class="label1" for="exampleInputPassword2">Ponovite lozinku</label>
 
                     
@@ -97,12 +96,12 @@ export default {
             firebase.auth().createUserWithEmailAndPassword(this.username, this.password)
             .then(function() {
                 console.log('Uspješna registracija');
-
+                alert("Uspješno ste se registrirali!");
                 }
             )
             .catch(function(error) {
                 console.error("Došlo je do greške", error),
-                alert('Lozinka mora imati barem 6 znakova');
+                alert('Niste upisali dobru lozinku ili e-mail adresu!');
             });
             
             console.log('Nastavak');

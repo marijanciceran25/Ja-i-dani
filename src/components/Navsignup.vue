@@ -2,7 +2,7 @@
 <div>
     <b-navbar toggleable="lg" type="dark" class="stil">
     <img src=@/assets/P.png id="navbarP">
-    <b-navbar-brand href="/">Park Finder</b-navbar-brand>
+    <b-navbar-brand href="/sign_in">Park Finder</b-navbar-brand>
   
     
 
