@@ -95,11 +95,11 @@ export default {
 
 
 <style>
-.form_group1 {
+div.form_group1 {
     
     border: none;
     background-color:rgb(63, 60, 60);
-    height: 660px;
+    height: 666px;
     
 }
 

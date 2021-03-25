@@ -6,7 +6,6 @@
             <b-card>
             <h2>Registracija</h2>
             <br>
-            <br>
             <div class="form-group3">
                 <input 
                     type="email"
@@ -19,9 +18,7 @@
                     <label for="exampleInputEmail1">Email</label>
             </div>
             <br>
-            <br>
-          
-           
+    
             <div class="form-group4">
                 <input 
                     type="password"
@@ -30,15 +27,13 @@
                     id="exampleInputPassword1"
                     placeholder="Lozinka" />
                     <password-meter :password="password" @score="onScore" />
-                    <span v-if="score === 0">Upišite jaču lozinku</span>
+                    <span v-if="score === 0">Lozinka je slaba</span>
                     <br>
                     <label for="exampleInputPassword1">Lozinka</label>
 
             </div>
             <br>
-            
-           
-
+       
             <div class="form-group5">
       
                 
@@ -135,7 +130,7 @@ div.form_group1 {
     
     border: none;
     background-color:rgb(63, 60, 60);
-    height: 765px
+    height: 800px
     
 }
 
@@ -152,7 +147,7 @@ div.card {
     color: aliceblue;
     border-radius: 10px;
     max-width:1000%;
-    height: 700px;
+    height: 600px;
     
 }
  .col {

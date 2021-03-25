@@ -5,6 +5,9 @@
         <div class="row">
           <center>
           <div class="col-sm-12 col-md-6">
+            <br>
+            <br>
+            <br>
             <h6>O nama</h6>
             <p class="text-justify">Ovom aplikacijom želimo olakšati korisnicima pronalazak dostupnih parkirnih mjesta i njihove lokacije,  prikaz parkirnih zona uz termin naplaćivanja određene parking zone.
 Ova aplikacija će slati korisnicima obavijesti i prikazivati informacije o radnom vremenu i dostupnosti parkirnih zona/mjesta.
@@ -39,6 +42,7 @@ export default {
   font-size:15px;
   line-height:24px;
   color:#737373;
+  height: 550px;
 }
 .site-footer hr
 {
@@ -117,7 +121,9 @@ export default {
 {
   .site-footer
   {
-    padding-bottom:0
+    padding-bottom:0;
+   
+    
   }
   .site-footer .copyright-text,.site-footer
   {
