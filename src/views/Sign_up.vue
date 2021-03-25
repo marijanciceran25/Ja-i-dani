@@ -3,7 +3,7 @@
         <div class="form_group1">
            <Navsignup></Navsignup>
            <div class="form_group2">
-            <b-card id="sign">
+            <b-card>
             <h2>Registracija</h2>
             <br>
             <br>
@@ -29,8 +29,11 @@
                     class="form-control" 
                     id="exampleInputPassword1"
                     placeholder="Lozinka" />
+                    <password-meter :password="password" @score="onScore" />
+                    <span v-if="score === 0">Upišite jaču lozinku</span>
                     <br>
                     <label for="exampleInputPassword1">Lozinka</label>
+
             </div>
             <br>
             
@@ -47,33 +50,31 @@
                     placeholder="Ponovite lozinku"/>
                     <strong><label class="usporedba" for="passwordnotmatching">{{comparePasswords}}</label></strong>
                     <br>
-                    <label class="label1" for="exampleInputPassword2">Ponovite lozinku</label>
-
-                    
-                    
-                    
+                    <label class="label1" for="exampleInputPassword2">Ponovite lozinku</label>   
                                    
             </div>
-            
-            
-           
+          
             <b-button class="btn" variant="danger" @click="signup">Registriraj se</b-button>
             <br>
             <br>
             <br>
             
-            <b-button class="btn2" href="/sign_in">Već imam račun</b-button>
+            <b-button class="btn2" href="/">Već imam račun</b-button>
+            <br>
+            <br>
+            <br>
+            <br>
             </b-card>
+            
            </div>
+
         </div>
-        
-      
-    
+
 </template>
 
 <script>
 
-
+import passwordMeter from "vue-simple-password-meter";
 import { firebase } from '@/firebase';
 import Navsignup from '../components/Navsignup.vue';
 
@@ -81,6 +82,7 @@ export default {
     name2: 'Sign_up',
     components: {
         Navsignup,
+        passwordMeter
     
     },
  
@@ -89,6 +91,7 @@ export default {
             username: '',
             password: '',
             passwordRepeat:'',
+            score: null
            
         };
     },
@@ -108,6 +111,12 @@ export default {
             console.log('Nastavak');
 
         },
+
+        onScore({ score, strength }) {
+            console.log(score); // from 0 to 4
+            console.log(strength); // one of : 'risky', 'guessable', 'weak', 'safe' , 'secure' 
+            this.score = score;
+    }
     },
 
     computed: {
@@ -120,11 +129,13 @@ export default {
 
 
 <style>
-.form_group1 {
+
+
+div.form_group1 {
     
     border: none;
     background-color:rgb(63, 60, 60);
-    
+    height: 765px
     
 }
 
@@ -135,21 +146,13 @@ export default {
 
 }
 
-#sign {
-    background-color: #044ca4;
-    color: aliceblue;
-    max-height: 100%;
-    border-radius: 10px;
-    
-  
-    
-}
 
 div.card {
-   
+    background-color: #044ca4;
+    color: aliceblue;
     border-radius: 10px;
-    max-width:100%;
-    
+    max-width:1000%;
+    height: 700px;
     
 }
  .col {
@@ -174,13 +177,40 @@ div.card {
 }
 .usporedba {
     color: red;
-    font-size: 20px;
+    font-size: 15px;
     text-align: right;
-    margin-left: 67%;
+    margin-left: 60%;
     
 }
 .label1 {
     margin-left: 0%;
+}
+
+.po-password-strength-bar {
+  border-radius: 2px;
+  transition: all 0.2s linear;
+  height: 5px;
+  margin-top: 8px;
+}
+
+.po-password-strength-bar.risky {
+  background-color: #f95e68;
+}
+
+.po-password-strength-bar.guessable {
+  background-color: #fb964d;
+}
+
+.po-password-strength-bar.weak {
+  background-color: #fdd244;
+}
+
+.po-password-strength-bar.safe {
+  background-color: #b0dc53;
+}
+
+.po-password-strength-bar.secure {
+  background-color: #35cc62;
 }
 
 
