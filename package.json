@@ -16,6 +16,7 @@
     "store": "^2.0.12",
     "vee-validate": "^4.2.3",
     "vue": "^2.6.12",
+    "vue-i18n": "^8.24.2",
     "vue-router": "^3.5.1",
     "vue-simple-password-meter": "0.0.24",
     "vuelidate": "^0.7.6",

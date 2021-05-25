@@ -30,10 +30,6 @@
                     <label for="exampleInputPassword1">Lozinka</label>
             </div>
             <br>
-
-            <br>
-            <br>
-            
           
 
             <b-button class="btn" type="submit" variant="danger" @click="login">Prijava</b-button>
@@ -44,6 +40,9 @@
             </b-card>
            </div>
         </div>
+        
+    <Footer></Footer>
+
 </div>
 </template>
 
@@ -52,13 +51,14 @@
 
 
 import Navsignup from '../components/Navsignup.vue';
+import Footer from '@/components/Footer.vue';
 import {firebase} from '@/firebase';
 
 export default {
     name1: 'Sign_in',
     components: {
         Navsignup,
-    
+        Footer    
     },
     
     data() {
