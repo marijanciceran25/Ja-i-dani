@@ -6,9 +6,17 @@
     <br>
     <br>
     <br>
-    
+    <h2><b>Kalkulator</b></h2>
+    <br>
+    <center>
+    <div class="top">
     <h4 style="padding-top:10px">Odaberite jedan od parkinga</h4>
     <p>*Napomena: zadržavanje više od 5 sati na određenom parkingu smatra se dnevnom kartom čija cijena je ista za svaki parking</p>
+    <p style="padding:10px">Ljetna dnevna karta: <b>50Kn</b> <br> Zimska dnevna karta: <b>40Kn</b> </p>
+    </div>
+    <br>
+    </center>
+    <br>
 
     <b-card no-body class="mb-1">
       <b-card-header header-tag="header" class="p-1" role="tab">
@@ -16,7 +24,7 @@
       </b-card-header>
       <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
         <b-card-body>
-         <b-card-text>Cijena: 6 Kn/h  <br> Radno vrijeme: 12:00 - 22:00 </b-card-text>
+         <b-card-text>Cijena: 8 Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 08:00 - 21:00 <br> Sub: 10:00-21:00 <br> Ned: 11:00-21:00 </b-card-text>
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected" :options="options">
             <template #first>
@@ -34,7 +42,7 @@
       </b-card-header>
       <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
         <b-card-body>
-        <b-card-text>Cijena: 5 Kn/h  <br> Radno vrijeme: 09:00 - 19:00 </b-card-text>
+        <b-card-text>Cijena: 10 Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 09:00 - 21:00 <br> Sub: 08:00-22:00 <br> Ned: 10:00-22:00 </b-card-text>
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected2" :options="options2">
             <template #first>
@@ -52,7 +60,7 @@
       </b-card-header>
       <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
         <b-card-body>
-         <b-card-text>Cijena: 4 Kn/h  <br> Radno vrijeme: 8:00 - 20:00 </b-card-text>
+         <b-card-text>Cijena: 8 Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 09:00 - 21:00 <br> Sub: 10:00-21:00 <br> Ned: 10:00-20:00 </b-card-text>
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected3" :options="options3">
             <template #first>
@@ -70,7 +78,7 @@
       </b-card-header>
       <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
         <b-card-body>
-         <b-card-text>Cijena: 6 Kn/h  <br> Radno vrijeme: 11:00 - 21:00 </b-card-text>
+         <b-card-text>Cijena: 9 Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 09:00 - 20:00 <br> Sub: 08:00-20:00 <br> Ned: 10:00-20:00 </b-card-text>
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected4" :options="options4">
             <template #first>
@@ -88,7 +96,7 @@
       </b-card-header>
       <b-collapse id="accordion-5" accordion="my-accordion" role="tabpanel">
         <b-card-body>
-          <b-card-text>Cijena: 7 Kn/h  <br> Radno vrijeme: 10:00 - 20:00 </b-card-text>
+          <b-card-text>Cijena: 8 Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 08:00 - 20:00 <br> Sub: 09:00-21:00 <br> Ned: 11:00-21:00 </b-card-text>
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected5" :options="options5">
             <template #first>
@@ -122,6 +130,9 @@
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
 
+const ljetna=50;
+
+
   export default {
     components: {
       Navbar,
@@ -135,48 +146,48 @@ import Footer from '@/components/Footer.vue';
       },
         selected: null,
         options: [
-          { value: '6', text: '1 sat' },
-          { value: '12', text: '2 sata' },
-          { value: '18', text: '3 sata' },
-          { value: '24', text: '4 sata' },
-          { value: '30', text: '5 sati' },
-          { value: '40', text: 'Dnevna' },
+          { value: '8', text: '1 sat' },
+          { value: '16', text: '2 sata' },
+          { value: '24', text: '3 sata' },
+          { value: '30', text: '4 sata' },
+          { value: '38', text: '5 sati' },
+          { value: ljetna, text: 'Dnevna ljetna' },
         ],
         selected2: null,
         options2: [
-          { value: '5', text: '1 sat' },
-          { value: '10', text: '2 sata' },
-          { value: '15', text: '3 sata' },
-          { value: '20', text: '4 sata' },
-          { value: '25', text: '5 sati' },
-          { value: '40', text: 'Dnevna' },
+          { value: '10', text: '1 sat' },
+          { value: '20', text: '2 sata' },
+          { value: '30', text: '3 sata' },
+          { value: '40', text: '4 sata' },
+          { value: '50', text: '5 sati' },
+          { value: ljetna, text: 'Dnevna ljetna' },
         ],
         selected3: null,
         options3: [
-          { value: '4', text: '1 sat' },
-          { value: '8', text: '2 sata' },
-          { value: '12', text: '3 sata' },
-          { value: '16', text: '4 sata' },
-          { value: '20', text: '5 sati' },
-          { value: '40', text: 'Dnevna' },
+          { value: '8', text: '1 sat' },
+          { value: '16', text: '2 sata' },
+          { value: '24', text: '3 sata' },
+          { value: '30', text: '4 sata' },
+          { value: '38', text: '5 sati' },
+          { value: ljetna, text: 'Dnevna ljetna' },
         ],
         selected4: null,
         options4: [
-          { value: '6', text: '1 sat' },
-          { value: '12', text: '2 sata' },
-          { value: '18', text: '3 sata' },
-          { value: '24', text: '4 sata' },
-          { value: '30', text: '5 sati' },
-          { value: '40', text: 'Dnevna' },
+          { value: '9', text: '1 sat' },
+          { value: '18', text: '2 sata' },
+          { value: '27', text: '3 sata' },
+          { value: '36', text: '4 sata' },
+          { value: '45', text: '5 sati' },
+          { value: ljetna, text: 'Dnevna ljetna' },
         ],
         selected5: null,
         options5: [
-          { value: '7', text: '1 sat' },
-          { value: '14', text: '2 sata' },
-          { value: '21', text: '3 sata' },
-          { value: '28', text: '4 sata' },
-          { value: '35', text: '5 sati' },
-          { value: '40', text: 'Dnevna' },
+          { value: '8', text: '1 sat' },
+          { value: '16', text: '2 sata' },
+          { value: '24', text: '3 sata' },
+          { value: '30', text: '4 sata' },
+          { value: '38', text: '5 sati' },
+          { value: ljetna, text: 'Dnevna ljetna' },
         ]
       }
     },
@@ -187,7 +198,7 @@ import Footer from '@/components/Footer.vue';
           if(unos==1 || unos>365) 
             {alert('Krivi unos, molimo Vas unesite broj između 2 i 365.')}
           else 
-            { this.form.total = unos * 40}
+            { this.form.total = unos * ljetna}
         }
         else {{alert('Krivi unos, usesen je negativan broj ili 0')}}
   }
@@ -197,6 +208,35 @@ import Footer from '@/components/Footer.vue';
 
 <style lang="scss">
 .bgkalkus{
-  background-color: orange
+  background-color: white;
+  color: black;
+}
+.top{
+  background-color: #044ca4 !important;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid black;
+  color: white;
+  width: 80%;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+div.card.mb-1 {
+  background-color: transparent;
+  color: black;
+  height: 350px;
+}
+
+button.btn.btn-info.btn-block.collapsed{
+  background-color: #044ca4;
+  color: #fff;
+  border-color: black;
+}
+
+header.card-header.p-1{
+  background-color: transparent;
 }
 </style>

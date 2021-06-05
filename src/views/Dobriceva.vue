@@ -6,11 +6,11 @@
     <center>
 <div class="box">
   
-  <img src="../assets/Dobriceva.jpg">
+  <img src="https://firebasestorage.googleapis.com/v0/b/parkfinder-60514.appspot.com/o/DobricevaPage.jpg?alt=media&token=06d0bedb-12ef-4a03-9089-3ff07f0d2dde">
 
 </div>
 <div class="zaparking">
-    <h2>Parking Dobriceva ulica</h2>
+    <h2>Parking Dobrićeva ulica</h2>
     <br>
     <h4>Dobricheva ul., 52100, Pula</h4>
 </div>
@@ -101,7 +101,6 @@ export default {
 </script>
 <style>
 .Titov {
-    background-color: orange;
 }
 .proba {
     color: black;

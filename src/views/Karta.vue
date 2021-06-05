@@ -5,36 +5,30 @@
     <br>
     <br>
     <br>
-    <br>
-    <h1>Mapa stranica</h1>
+    <h2><b>Karta</b></h2>
     <br>
     <br>
     <center>
-    <b-row class="proba">
-        <b-col>
-        <b-text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis fuga error. Excepturi mollitia aspernatur, aliquid aut alias voluptate reprehenderit?</b-text>
-        </b-col>
-        </b-row>
-    </center>    
-</div>   
+    <Mapa> </Mapa>
+    <br>
+    </center>
+    <Footer></Footer>   
+</div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar.vue';
+import Mapa from '@/components/Mapa.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
-    name: "Mapa",
+    name: "Karta",
     components: {
-        Navbar
+        Navbar,
+        Mapa,
+        Footer     
     },
 };
 </script>
 <style>
-.Mapa {
-    background-color: turquoise;
-}
-.proba {
-    color: black;
-    font-weight: bold;
-}
 </style>

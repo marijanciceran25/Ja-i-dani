@@ -6,7 +6,7 @@
     <center>
 <div class="box">
   
-  <img src="../assets/Tržnica.jpg">
+  <img src="https://firebasestorage.googleapis.com/v0/b/parkfinder-60514.appspot.com/o/Tr%C5%BEnicaPage.jpg?alt=media&token=68057530-d368-4036-973b-b2dfda45037a">
 
 </div>
 <div class="zaparking">

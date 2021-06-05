@@ -6,7 +6,7 @@
     <center>
 <div class="box">
   
-  <img src="../assets/Bolnica.jpg">
+  <img src="https://firebasestorage.googleapis.com/v0/b/parkfinder-60514.appspot.com/o/bolnica.jpg?alt=media&token=bbfa7685-8384-4f38-882f-4ac718c02987">
 
 </div>
 <div class="zaparking">

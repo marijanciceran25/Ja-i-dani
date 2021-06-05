@@ -5,14 +5,21 @@ import router from "./router";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
+import * as VueGoogleMaps from 'vue2-google-maps';
+import VueGeolocation from 'vue-browser-geolocation';
 
+Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 export const changeRoute = new Vue();
 Vue.use(router)
-
-
-Vue.config.productionTip = false;
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyBYqD66rArcPkXO1Cw4_tQmuvJDpUMrQ0s',
+    libraries: 'places',
+  },
+});
+Vue.use(VueGeolocation)
 
 new Vue({
   router,
