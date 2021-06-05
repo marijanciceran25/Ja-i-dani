@@ -19,7 +19,7 @@
 <div class="container">
 <br>
 <h3><b> Lokacija: <hr></b></h3>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2827.7703099173814!2d13.84845035148715!3d44.866970581011735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477cd32057257c9b%3A0x64d811ad9c49550c!2sParking%20Tr%C5%BEnica!5e0!3m2!1sen!2shr!4v1621127595842!5m2!1sen!2shr" width="80%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2827.7703099173814!2d13.84845035148715!3d44.866970581011735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477cd32057257c9b%3A0x64d811ad9c49550c!2sParking%20Tr%C5%BEnica!5e0!3m2!1sen!2shr!4v1621127595842!5m2!1sen!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 <br>
 <br>
 <b-container class="bv-example-row">
@@ -143,7 +143,5 @@ export default {
   padding-right: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
 } 
 </style>

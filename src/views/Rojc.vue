@@ -19,7 +19,7 @@
 <div class="container">
 <br>
 <h3><b> Lokacija: <hr></b></h3>
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11311.967852727505!2d13.8441199!3d44.8624584!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2cd5bd0b9be66d58!2sKarlo%20Rojc%20South%20Parking!5e0!3m2!1sen!2shr!4v1621085124714!5m2!1sen!2shr" width="80%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11311.967852727505!2d13.8441199!3d44.8624584!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2cd5bd0b9be66d58!2sKarlo%20Rojc%20South%20Parking!5e0!3m2!1sen!2shr!4v1621085124714!5m2!1sen!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 <br>
 <br>
 <b-container class="bv-example-row">
@@ -143,7 +143,5 @@ export default {
   padding-right: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
 } 
 </style>
