@@ -36,9 +36,6 @@ export default {
 </script>
 
 <style lang="scss">
-.obavijesti
-{
-}
 
 .zaparking{
   background-color:#044ca4 !important;
@@ -51,5 +48,9 @@ export default {
   padding-right: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 } 
 </style>

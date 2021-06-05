@@ -97,9 +97,9 @@ export default {
     },
 };
 </script>
+
 <style>
-.Tržnica {
-}
+
 .proba {
     color: black;
     font-weight: bold;
