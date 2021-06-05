@@ -19,6 +19,7 @@
             <br>
     
             <div class="form-group4">
+                <br>
                 <input 
                     type="password"
                     v-model="password" 
@@ -27,6 +28,7 @@
                     placeholder="Lozinka" />
                     <password-meter :password="password" @score="onScore" />
                     <span v-if="score === 0">Lozinka je slaba</span>
+                    <br>
                     <label for="exampleInputPassword1">Lozinka</label>
 
             </div>
