@@ -97,7 +97,8 @@ export default {
 };
 </script>
 <style>
-
+.Karolina {
+}
 .proba {
     color: black;
     font-weight: bold;

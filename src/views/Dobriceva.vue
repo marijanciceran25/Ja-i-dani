@@ -99,9 +99,7 @@ export default {
     },
 };
 </script>
-
 <style>
-
 .Titov {
     background-color: orange;
 }

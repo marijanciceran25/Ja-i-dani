@@ -22,7 +22,7 @@
       <!-- Desna strana navbara -->
       <b-navbar-nav class="ml-auto">
         <hr>
-        <!--<b-nav-item class="Item-1" href="/obavijesti" img>Obavijesti</b-nav-item>-->
+        <b-nav-item class="Item-1" href="/obavijesti" img>Obavijesti</b-nav-item>
         <b-nav-item class="Item-2" href="#" @click="logout()">Odjava</b-nav-item>
 
       </b-navbar-nav>

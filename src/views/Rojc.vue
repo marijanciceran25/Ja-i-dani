@@ -98,7 +98,8 @@ export default {
 };
 </script>
 <style>
-
+.Rojc {
+}
 .proba {
     color: black;
     font-weight: bold;

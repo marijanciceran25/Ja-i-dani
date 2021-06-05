@@ -8,7 +8,7 @@ import Dobriceva from "@/views/Dobriceva.vue";
 import Bolnica from "@/views/Bolnica.vue";
 import Karta from "@/views/Karta.vue";
 import Kalkulator from "@/views/Kalkulator.vue";
-//import Obavijesti from "@/views/Obavijesti.vue";
+import Obavijesti from "@/views/Obavijesti.vue";
 import Sign_up from "@/views/Sign_up.vue";
 import Sign_in from "@/views/Sign_in.vue";
 Vue.use(VueRouter);
@@ -55,11 +55,11 @@ const routes = [
     name: "Kalkulator",
     component: Kalkulator
   },  
-  /*{
+  {
     path: "/obavijesti",
     name: "Obavijesti",
     component: Obavijesti
-  },*/ 
+  },  
   {
     path: "/sign_up",
     name: "Sign_up",

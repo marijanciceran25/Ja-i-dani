@@ -5,6 +5,7 @@
     <br>
     <br>
     <br>
+    <br>
     
     <h4 style="padding-top:10px">Odaberite jedan od parkinga</h4>
     <p>*Napomena: zadržavanje više od 5 sati na određenom parkingu smatra se dnevnom kartom čija cijena je ista za svaki parking</p>
@@ -179,7 +180,7 @@ import Footer from '@/components/Footer.vue';
         ]
       }
     },
-    methods: {
+     methods: {
     updateQuantity: function() {
         var unos=document.getElementById("quantity").value
         if(unos>0) {
@@ -195,27 +196,7 @@ import Footer from '@/components/Footer.vue';
 </script>
 
 <style lang="scss">
-
 .bgkalkus{
-  background-color: #044ca4
-}
-
-.accordion{
-  color: white;
-}
-
-.btn{
-  background-color: #044ca4
-
-}
-
-.btn-info{
-  background-color: #044ca4
-
-}
-
-.btn-block{
-  background-color: #044ca4
-
+  background-color: orange
 }
 </style>
