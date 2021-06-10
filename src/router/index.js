@@ -11,7 +11,9 @@ import Kalkulator from "@/views/Kalkulator.vue";
 import Obavijesti from "@/views/Obavijesti.vue";
 import Sign_up from "@/views/Sign_up.vue";
 import Sign_in from "@/views/Sign_in.vue";
+import Moj_Profil from "@/views/Mojprofil.vue";
 Vue.use(VueRouter);
+
 
 const routes = [
   {
@@ -65,11 +67,16 @@ const routes = [
     name: "Sign_up",
     component: Sign_up
   },
-{
-  path: "/",
-  name: "Sign_in",
-  component: Sign_in
-},
+  {
+    path: "/",
+    name: "Sign_in",
+    component: Sign_in
+  },
+  {
+    path: "/moj_profil",
+    name: "Moj_profil",
+    component: Moj_Profil
+  }
 ];
 
 const router = new VueRouter({

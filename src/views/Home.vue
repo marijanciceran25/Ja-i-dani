@@ -51,20 +51,20 @@ export default {
     components: {
         Kartica,
         Navbar,
-        Footer,
+        Footer
     },
     data: function() {
         return {
-        kartice,
+        kartice
         };
-    },
-};
+        
+},
+}
 </script>
 
 <style>
 
 .nav1 {
     max-width: 100%;
-    
 }
 </style>

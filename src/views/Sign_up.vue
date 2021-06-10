@@ -6,20 +6,19 @@
             <b-card>
             <h2>Registracija</h2>
             <br>
-            <div class="form-group3">
+            <div class="form-group4">
                 <input 
                     type="email"
-                    v-model="username"
+                    v-model="email"
                     class="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp" 
                     placeholder="Email"/>
-                    <label for="exampleInputEmail1">Email</label>
+                    <label for="exampleInputEmail1">E-mail</label>
             </div>
             <br>
     
-            <div class="form-group4">
-                <br>
+            <div class="form-group5">
                 <input 
                     type="password"
                     v-model="password" 
@@ -27,16 +26,13 @@
                     id="exampleInputPassword1"
                     placeholder="Lozinka" />
                     <password-meter :password="password" @score="onScore" />
-                    <span v-if="score === 0">Lozinka je slaba</span>
-                    <br>
-                    <label for="exampleInputPassword1">Lozinka</label>
+                    <span v-if="score === 0"><b>Lozinka je slaba</b><br></span>
+                    <label for="exampleInputPassword1">Lozinka<br></label>
 
             </div>
             <br>
        
-            <div class="form-group5">
-      
-                
+            <div class="form-group5">          
                 <input 
                     type="password"
                     v-model="passwordRepeat" 
@@ -54,13 +50,12 @@
             <br>
             <br>
             
-            <b-button class="btn2" href="/sign_in">Već imam račun</b-button>
+            <b-button class="btn2" href="/">Već imam račun</b-button>
             <br>
             <br>
             <br>
             <br>
             </b-card>
-            
            </div>
         <Footer></Footer>
         </div>
@@ -97,14 +92,13 @@ export default {
             firebase.auth().createUserWithEmailAndPassword(this.username, this.password)
             .then(function() {
                 console.log('Uspješna registracija');
-                alert("Uspješno ste se registrirali!");
+                alert("Dobro došli! " + this.username)
                 }
             )
             .catch(function(error) {
                 console.error("Došlo je do greške", error),
                 alert('Niste upisali dobru lozinku ili e-mail adresu!');
-            });
-            
+            });  
             console.log('Nastavak');
 
         },
@@ -129,32 +123,26 @@ export default {
 
 
 div.form_group1 {
-    
     border: none;
-    background-color:rgb(63, 60, 60);
-    height: 800px
-    
+    background-color: transparent;
+    height: auto !important;
 }
 
 .form_group2 {
    margin-left: 30%;
    margin-right: 30%;
-
-
 }
 
 
 div.card {
-    background-color: #044ca4;
-    color: aliceblue;
+    background-color: #044ca4 !important;
+    color: white !important;
     border-radius: 10px;
     max-width:1000%;
-    height: 600px;
-    
+    height: 700px;
 }
  .col {
     padding-left: 0%;
-
  }
 
 .signup {

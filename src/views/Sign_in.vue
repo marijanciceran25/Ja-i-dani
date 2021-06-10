@@ -82,7 +82,14 @@ export default {
                 var errorMessage = e.message;
                 if (errorCode === 'auth/wrong-password') {
                     alert('Kriva lozinka.');
-                } else {
+                } 
+                else if (errorCode === 'auth/invalid-email') {
+                    alert('Krivi e-mail.');
+                } 
+                else if (errorCode === 'auth/user-not-found') {
+                    alert('Ne postoji korisnik povezan sa ovim podacima. Korisnički profil je možda obrisan.');
+                } 
+                else {
                  alert(errorMessage);
                 }
                 console.log(e);
@@ -135,7 +142,4 @@ div.card {
     margin-left: 12%;
     margin-right: 12%;
 }
-
-
- 
 </style>

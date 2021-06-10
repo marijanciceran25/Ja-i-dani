@@ -2,7 +2,7 @@
 <div>
     <b-navbar toggleable="lg" type="dark" class="stil" fixed="top">
     <img src=@/assets/P.png id="navbarP">
-    <b-navbar-brand href="/">Park Finder</b-navbar-brand>
+    <b-navbar-brand href="/home">Park Finder</b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     
     <b-collapse id="nav-collapse" is-nav>
@@ -23,7 +23,10 @@
       <b-navbar-nav class="ml-auto">
         <hr>
         <b-nav-item class="Item-1" href="/obavijesti" img>Obavijesti</b-nav-item>
-        <b-nav-item class="Item-2" href="#" @click="logout()">Odjava</b-nav-item>
+        <b-nav-item-dropdown text="Profil">
+          <b-dropdown-item href="/Moj_Profil">Moj Profil</b-dropdown-item>
+          <b-dropdown-item href="#" @click="logout()">Odjava</b-dropdown-item>
+        </b-nav-item-dropdown>
 
       </b-navbar-nav>
      
