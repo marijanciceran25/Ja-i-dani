@@ -8,10 +8,11 @@
 
 import store from '@/store';
 import {firebase} from '@/firebase';
-// import router from '@/router';
+import router from '@/router';
 
 
 firebase.auth().onAuthStateChanged((user) => {
+  const currentRoute = router.currentRoute;
   if (user) {
     //Korisnik je ulogiran.
     console.log("***", user.email);
@@ -19,16 +20,12 @@ firebase.auth().onAuthStateChanged((user) => {
   } 
   else {
     //Korisnik nije ulogiran.
-    /* console.log('*** No user');
+    console.log('*** No user');
     store.currentUser = null;
 
-     if (router.name !== "Sign_in") {
+     if (currentRoute.meta.needsUser) {
       router.push({name: 'Sign_in'});
     }
-    else if(router.name == "Sign_up")
-    {
-      router.push({name: 'Sign_up'});
-    } */
   }
 });
 

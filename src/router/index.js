@@ -12,6 +12,7 @@ import Obavijesti from "@/views/Obavijesti.vue";
 import Sign_up from "@/views/Sign_up.vue";
 import Sign_in from "@/views/Sign_in.vue";
 import Moj_Profil from "@/views/Mojprofil.vue";
+import store from "@/store";
 Vue.use(VueRouter);
 
 
@@ -19,48 +20,75 @@ const routes = [
   {
     path: "/home",
     name: "Home",
-    component: Home
+    component: Home,
+    meta: {
+      needsUser: true
+    }
   },
 
   {
     path: "/rojc",
     name: "Rojc",
-    component: Rojc
+    component: Rojc,
+    meta: {
+      needsUser: true
+    }
   },
   {
     path: "/karolina",
     name: "Karolina",
-    component: Karolina
+    component: Karolina,
+    meta: {
+      needsUser: true
+    }
   }, 
   {
     path: "/trznica",
     name: "Trznica",
-    component: Trznica
+    component: Trznica,
+    meta: {
+      needsUser: true
+    }
   },
   {
     path: "/dobriceva",
     name: "Dobriceva",
-    component: Dobriceva
+    component: Dobriceva,
+    meta: {
+      needsUser: true
+    }
   },  
   {
     path: "/bolnica",
     name: "Bolnica",
-    component: Bolnica
+    component: Bolnica,
+    meta: {
+      needsUser: true
+    }
   },  
   {
     path: "/karta",
     name: "Karta",
-    component: Karta
+    component: Karta,
+    meta: {
+      needsUser: true
+    }
   },  
   {
     path: "/kalkulator",
     name: "Kalkulator",
-    component: Kalkulator
+    component: Kalkulator,
+    meta: {
+      needsUser: true
+    }
   },  
   {
     path: "/obavijesti",
     name: "Obavijesti",
-    component: Obavijesti
+    component: Obavijesti,
+    meta: {
+      needsUser: true
+    }
   },  
   {
     path: "/sign_up",
@@ -75,14 +103,23 @@ const routes = [
   {
     path: "/moj_profil",
     name: "Moj_profil",
-    component: Moj_Profil
+    component: Moj_Profil,
+    meta: {
+      needsUser: true
+    }
   }
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
+});
+
+router.beforeEach((to, from, next) => {
+  console.log("Stara ruta", from.name, "Nova ruta", to.name, "korisnik", store.currentUser)
+
+  next();
 });
 
 export default router;
