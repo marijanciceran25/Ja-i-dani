@@ -18,8 +18,8 @@
 
 <div class="container">
 <br>
-<h3><b> Lokacija: <hr></b></h3>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2827.7703099173814!2d13.84845035148715!3d44.866970581011735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477cd32057257c9b%3A0x64d811ad9c49550c!2sParking%20Tr%C5%BEnica!5e0!3m2!1sen!2shr!4v1621127595842!5m2!1sen!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<h3><b> Lokacija:</b></h3>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2827.7703099173814!2d13.84845035148715!3d44.866970581011735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477cd32057257c9b%3A0x64d811ad9c49550c!2sParking%20Tr%C5%BEnica!5e0!3m2!1sen!2shr!4v1621127595842!5m2!1sen!2shr" width="auto" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 <br>
 <br>
 <b-container class="bv-example-row">
@@ -98,8 +98,6 @@ export default {
 };
 </script>
 <style>
-.Tržnica {
-}
 .proba {
     color: black;
     font-weight: bold;
@@ -114,8 +112,7 @@ export default {
   width: 80%;
 }
 
-.bottom,
-.right{
+.bottom.right{
   margin:1em;
   position:absolute;
 }

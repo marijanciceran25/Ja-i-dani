@@ -81,7 +81,7 @@ const routes = [
     meta: {
       needsUser: true
     }
-  },  
+  },
   {
     path: "/obavijesti",
     name: "Obavijesti",

@@ -1,23 +1,23 @@
 <template>
+<center>
 <div class="bgkalkus">
-  <div class="accordion" role="tablist">
-    <Navbar></Navbar>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h2><b>Kalkulator</b></h2>
-    <br>
-    <center>
+  <Navbar></Navbar>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2><b>Kalkulator</b></h2>
+  <br>
+  <center>
     <div class="top">
-    <h4 style="padding-top:10px">Odaberite jedan od parkinga</h4>
-    <p>*Napomena: zadržavanje više od 5 sati na određenom parkingu smatra se dnevnom kartom čija cijena je ista za svaki parking</p>
-    <p style="padding:10px">Ljetna dnevna karta: <b>50Kn</b> <br> Zimska dnevna karta: <b>40Kn</b> </p>
+      <h4 style="padding-top:10px">Odaberite jedan od parkinga</h4>
+      <p>*Napomena: zadržavanje više od 5 sati na određenom parkingu smatra se dnevnom kartom čija je cijena ista za svaki parking</p>
+      <p style="padding:10px">Ljetna dnevna karta: <b>50Kn</b> <br> Zimska dnevna karta: <b>40Kn</b> </p>
     </div>
     <br>
-    </center>
-    <br>
-
+  </center>
+  <br>
+  <div class="accordion" role="tablist">
     <b-card no-body class="mb-1">
       <b-card-header header-tag="header" class="p-1" role="tab">
         <b-button block v-b-toggle.accordion-1 variant="info">Parking Rojc</b-button>
@@ -124,6 +124,7 @@
 
     <Footer></Footer>
 </div>
+</center>
 </template>
 
 <script>
@@ -215,28 +216,38 @@ const ljetna=50;
   background-color: #044ca4 !important;
   position: relative;
   overflow: hidden;
-  border: 2px solid black;
   color: white;
   width: 80%;
   padding-top: 15px;
   padding-right: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
+  border-radius: 10px;
 }
 
 div.card.mb-1 {
   background-color: transparent;
   color: black;
-  height: 350px;
+  height: auto;
 }
 
 button.btn.btn-info.btn-block.collapsed{
   background-color: #044ca4;
   color: #fff;
-  border-color: black;
+  border-color: #044ca4;
+}
+
+button.btn.btn-info.btn-block.not-collapsed{
+  background-color: #044ca4;
+  color: #fff;
+  border-color: #044ca4;
 }
 
 header.card-header.p-1{
   background-color: transparent;
+}
+
+.accordion{
+  width:80%;
 }
 </style>

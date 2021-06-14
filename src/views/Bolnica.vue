@@ -19,7 +19,7 @@
 <div class="container">
 <br>
 <h3><b> Lokacija: <hr></b></h3>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5655.70255684436!2d13.853008404105408!3d44.86532235184251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x75b69abb0215c851!2sHospital%20Parking!5e0!3m2!1sen!2shr!4v1621128055020!5m2!1sen!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5655.70255684436!2d13.853008404105408!3d44.86532235184251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x75b69abb0215c851!2sHospital%20Parking!5e0!3m2!1sen!2shr!4v1621128055020!5m2!1sen!2shr" width="auto" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 <br>
 <br>
 <b-container class="bv-example-row">
@@ -98,9 +98,6 @@ export default {
 };
 </script>
 <style>
-.Drosina {
-    background-color:yellow;
-}
 .proba {
     color: black;
     font-weight: bold;
@@ -112,7 +109,7 @@ export default {
   border-radius: 10px;
 }
 .box img{
-  width: 80%;
+  width: 100%;
 }
 
 .bottom,
@@ -139,7 +136,7 @@ export default {
   overflow: hidden;
   border: 1px solid black;
   color: white;
-  width: 80%;
+  width: 100%;
   padding-top: 15px;
   padding-right: 15px;
   padding-bottom: 15px;

@@ -1,38 +1,31 @@
 <template>
    <div>
-            <div>
-                <h1>Vaše koordinate:</h1>
-                <p>{{ coordinates.lat.toFixed(4) }} Latitude, {{ coordinates.lng.toFixed(4) }} Longitude</p>
-                <br>
-            </div>
 
     <button @click="drawMarkers">Prikaži lokacije </button>
     <button @click="clearMap">Očisti mapu</button>
-    
+    <br>
+    <br>
     <GmapMap
-        :center="center"
-        :zoom="14"
-        :options="mapStyle"
-        ref="map"
-        map-type-id="terrain"
-        style="width: 1200px; height: 600px"
+      :center="center"
+      :zoom="14"
+      ref="map"
+      map-type-id="terrain"
+      style="width: 100%; height: 600px"
     >
-
-  <gmap-info-window 
-        @closeclick="window_open=false" 
-        :opened="window_open" 
-        :position="infowindow"
-        :options="{
-          pixelOffset: {
-            width: 0,
-            height: -35
-          }
-        }"
+    <gmap-info-window 
+      @closeclick="window_open=false" 
+      :opened="window_open" 
+      :position="infowindow"
+      :options="{
+        pixelOffset: {
+          width: 0,
+          height: -35
+        }
+      }"
     >
-    Ja sam infowindow
-  </gmap-info-window>
-
-    <GmapMarker
+    <a href="/rojc">Klikni me!</a>
+    </gmap-info-window>
+      <GmapMarker
         :v-if="mapLoaded"
         :key="index"
         v-for="(m, index) in markers"
@@ -40,8 +33,7 @@
         :clickable="true"
         :label="m.label"
         @click="openWindow"
-        />
-
+      />
     </GmapMap>
   </div>
 </template>
@@ -60,10 +52,6 @@ export default {
     name: "Mapa",
     data(){
         return {
-            coordinates: {
-              lat: 0,
-              lng: 0 
-            },
             markers: [],
             center: parkpula,
             infowindow: rojc,

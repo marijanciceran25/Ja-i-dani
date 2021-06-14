@@ -1,5 +1,5 @@
 <template>
-<div class="Mapa">
+<div>
     <Navbar></Navbar>
     <br>
     <br>
@@ -7,12 +7,11 @@
     <br>
     <h2><b>Karta</b></h2>
     <br>
-    <br>
     <center>
-    <Mapa> </Mapa>
+    <Mapa></Mapa>
     <br>
-    </center>
-    <Footer></Footer>   
+    <Footer></Footer>
+    </center>  
 </div>
 </template>
 
@@ -30,5 +29,7 @@ export default {
     },
 };
 </script>
+
 <style>
+
 </style>

@@ -2,6 +2,7 @@
 
         <div class="form_group1">
            <Navsignup></Navsignup>
+           <br>
            <div class="form_group2">
             <b-card>
             <h2>Registracija</h2>
@@ -57,6 +58,7 @@
             <br>
             </b-card>
            </div>
+           <br>
         <Footer></Footer>
         </div>
 

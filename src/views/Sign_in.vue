@@ -2,6 +2,7 @@
 <div>
         <div class="form_group1">
            <Navsignup></Navsignup>
+           <br>
            <div class="form_group2">
             <b-card id="sign">
             <h2>Prijava</h2>
@@ -40,7 +41,7 @@
             </b-card>
            </div>
         </div>
-        
+        <br>
     <Footer></Footer>
 
 </div>
@@ -105,7 +106,7 @@ export default {
 div.form_group1 {
     
     border: none;
-    background-color:rgb(63, 60, 60);
+    background-color:white;
     height: 666px;
     
 }
