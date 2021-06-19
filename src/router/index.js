@@ -107,7 +107,7 @@ const routes = [
     meta: {
       needsUser: true
     }
-  }
+  },
 ];
 
 const router = new VueRouter({

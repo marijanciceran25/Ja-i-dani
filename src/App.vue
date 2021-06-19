@@ -36,14 +36,6 @@ export default {
       store,
     };
   },
-  components: {
-  },
-
-methods: {
-    loginAlertU(){
-            alert("Welcome:  " + store.currentUser)
-        },
-},
 }
 
 </script>

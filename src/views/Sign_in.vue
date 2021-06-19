@@ -12,7 +12,7 @@
             <div class="form-group3">
                 <input 
                     type="email" 
-                    v-model="username" 
+                    v-model="email" 
                     class="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp" 
@@ -54,6 +54,8 @@
 import Navsignup from '../components/Navsignup.vue';
 import Footer from '@/components/Footer.vue';
 import {firebase} from '@/firebase';
+import {db} from '@/firebase';
+import store from "@/store";
 
 export default {
     name1: 'Sign_in',
@@ -64,16 +66,23 @@ export default {
     
     data() {
         return {
-            username:"",
+            email:"",
             password:""
         }
     },
     methods: {
         login() {
-            console.log("login..." + this.username);
+            console.log("login..." + this.email);
             console.log(this.$router);
-            firebase.auth().signInWithEmailAndPassword(this.username, this.password)
+            firebase
+            .auth()
+            .signInWithEmailAndPassword(this.email, this.password)
             .then((result)=> {
+                store.id = this.email
+
+                db.collection("korisnici")
+            .doc(store.id)
+
                 console.log('Uspješna prijava', result);
                 this.$router.replace({name: 'Home'});
             })
@@ -102,12 +111,12 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 div.form_group1 {
     
     border: none;
     background-color:white;
-    height: 666px;
+    height: auto;
     
 }
 

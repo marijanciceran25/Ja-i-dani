@@ -1,16 +1,36 @@
 <template>
-
         <div class="form_group1">
            <Navsignup></Navsignup>
            <br>
            <div class="form_group2">
+            <form>
             <b-card>
             <h2>Registracija</h2>
             <br>
-            <div class="form-group4">
+            <div class="form-group3">
                 <input 
-                    type="email"
-                    v-model="email"
+                    type="text"
+                    v-model="ime"
+                    class="form-control"
+                    placeholder="Ime"
+                    required/>
+                    <label for="exampleInputName1">Ime</label>
+            </div>
+            <br>
+            <div class="form-group3">
+                <input 
+                    type="text"
+                    v-model="prezime"
+                    class="form-control"
+                    placeholder="Prezime"
+                    required/>
+                    <label for="exampleInputSurname1">Prezime</label>
+            </div>
+            <br>
+            <div class="form-group5">
+                <input 
+                    type="text"
+                    v-model="username"
                     class="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp" 
@@ -19,7 +39,7 @@
             </div>
             <br>
     
-            <div class="form-group5">
+            <div class="form-group3">
                 <input 
                     type="password"
                     v-model="password" 
@@ -33,7 +53,7 @@
             </div>
             <br>
        
-            <div class="form-group5">          
+            <div class="form-group3">          
                 <input 
                     type="password"
                     v-model="passwordRepeat" 
@@ -46,28 +66,24 @@
                                    
             </div>
             <br>
-            <b-button class="btn" variant="danger" @click="signup">Registriraj se</b-button>
+            <b-button type="button" class="btn" variant="danger" @click="signup">Registriraj se!</b-button>
             <br>
             <br>
-            <br>
-            
             <b-button class="btn2" href="/">Već imam račun</b-button>
-            <br>
-            <br>
-            <br>
-            <br>
             </b-card>
+            </form>
            </div>
            <br>
         <Footer></Footer>
         </div>
-
 </template>
 
 <script>
 
 import passwordMeter from "vue-simple-password-meter";
 import { firebase } from '@/firebase';
+import { db } from '@/firebase';
+import store from "@/store";
 import Navsignup from '../components/Navsignup.vue';
 import Footer from '@/components/Footer.vue';
 
@@ -82,34 +98,76 @@ export default {
  
   data() {
         return {
+            ime:'',
+            prezime:'',
             username: '',
             password: '',
-            passwordRepeat:'',
+            passwordRepeat: '',
+            datum_registracije: '',
             score: null
-           
         };
     },
     methods: {
         signup() {
+            if (this.ime === '' || this.ime === null || this.ime.value === 0){
+                alert("Unesite Vaše ime!");
+            }
+
+            else if (this.prezime === '' || this.prezime === null || this.prezime.value === 0){
+                alert("Unesite Vaše prezime!");
+            }
+
+            else if (this.username === '' || this.username === null || this.username.value === 0){
+                alert("Unesite Vaš E-Mail!");
+            }
+
+            else if (this.password === '' || this.password === null){
+                alert("Unesite Vašu lozinku!");
+            }
+
+            else if (this.passwordRepeat != this.password || this.passwordRepeat === '' || this.passwordRepeat === null){
+                alert("Vaše lozinke se ne podudaraju!");
+            }
+
+            else {
+            var currentDate = new Date().toJSON().slice(0,10).replace(/-/g,'/');
             firebase.auth().createUserWithEmailAndPassword(this.username, this.password)
-            .then(function() {
+            .then(() => {
+                store.id = this.username
+                db.collection("korisnici")
+            .doc(store.id)
+     
+            .set({
+                ime: this.ime,
+                prezime: this.prezime,
+                username: this.username,
+                password: this.password,
+                datum_registracije: currentDate,
+              })
+
                 console.log('Uspješna registracija');
-                alert("Dobro došli! " + this.username)
+                alert("Dobro došli! ");
                 }
             )
             .catch(function(error) {
+                var errorCode = error.code;
+                if (errorCode === 'auth/email-already-in-use') {
+                    alert('Ovaj račun se već koristi!');
+                }
+                else { 
                 console.error("Došlo je do greške", error),
                 alert('Niste upisali dobru lozinku ili e-mail adresu!');
+                }
             });  
             console.log('Nastavak');
 
-        },
+        }},
 
         onScore({ score, strength }) {
             console.log(score); // from 0 to 4
             console.log(strength); // one of : 'risky', 'guessable', 'weak', 'safe' , 'secure' 
             this.score = score;
-    }
+    },
     },
 
     computed: {
@@ -121,13 +179,12 @@ export default {
 </script>
 
 
-<style>
-
+<style scoped>
 
 div.form_group1 {
     border: none;
     background-color: transparent;
-    height: auto !important;
+    height: 500px !important;
 }
 
 .form_group2 {
@@ -141,7 +198,7 @@ div.card {
     color: white !important;
     border-radius: 10px;
     max-width:1000%;
-    height: 700px;
+    height: 750px !important;
 }
  .col {
     padding-left: 0%;

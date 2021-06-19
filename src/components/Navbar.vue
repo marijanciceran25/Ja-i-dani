@@ -18,7 +18,13 @@
           <b-dropdown-item href="/bolnica">Bolnica</b-dropdown-item>
         </b-nav-item-dropdown>
         <b-nav-item href="/kalkulator">Kalkulator</b-nav-item>
-      </b-navbar-nav>
+      </b-navbar-nav> 
+
+      <b-navbar-nav>
+        <b><digital-clock :blink="true" class="sat"/></b>
+      </b-navbar-nav> 
+
+      
       <!-- Desna strana navbara -->
       <b-navbar-nav class="ml-auto" id="profil">
         <b-nav-item class="Item-1" href="/obavijesti" img>Obavijesti</b-nav-item>
@@ -37,8 +43,13 @@
 
 <script>
 import {firebase} from '@/firebase';
+import DigitalClock from "vue-digital-clock";
+
 export default {
   name: "Navbar",
+  components: {
+    DigitalClock,
+  },
   methods: {
     logout() {
       firebase.auth().signOut().then(()=>{
@@ -57,7 +68,13 @@ export default {
   padding-right:20px
 }
 
-
+.sat{
+  color: white;
+  margin: auto;
+  width: 50%;
+  border: 2px solid white;
+  padding: 10px;
+}
 
 .stil{
   background-color:#044ca4 !important;

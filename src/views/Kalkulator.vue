@@ -131,7 +131,7 @@
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
 
-const ljetna=50;
+const ljetna = 50;
 
 
   export default {
