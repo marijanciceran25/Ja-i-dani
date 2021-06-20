@@ -215,8 +215,8 @@ div.card {
 }
 
 .form-group5 {
-    margin-left: 12%;
-    margin-right: 12%;
+    margin-left: 30%;
+    margin-right: 30%;
 
 }
 .usporedba {

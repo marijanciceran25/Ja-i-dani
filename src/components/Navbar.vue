@@ -20,21 +20,22 @@
         <b-nav-item href="/kalkulator">Kalkulator</b-nav-item>
       </b-navbar-nav> 
 
-      <b-navbar-nav>
-        <b><digital-clock :blink="true" class="sat"/></b>
-      </b-navbar-nav> 
+       
 
       
       <!-- Desna strana navbara -->
       <b-navbar-nav class="ml-auto" id="profil">
         <b-nav-item class="Item-1" href="/obavijesti" img>Obavijesti</b-nav-item>
-        <b-nav-item-dropdown text="Profil" id="profil">
+        <b-nav-item-dropdown text="Profil" id="profil1">
           <b-dropdown-item href="/Moj_Profil">Moj Profil</b-dropdown-item>
           <b-dropdown-item href="#" @click="logout()">Odjava</b-dropdown-item>
         </b-nav-item-dropdown>
 
       </b-navbar-nav>
-     
+     <b-navbar-nav>
+        <b><digital-clock :blink="true" class="sat"/></b>
+      </b-navbar-nav>
+      <br>
     </b-collapse>
    
   </b-navbar>
@@ -91,7 +92,7 @@ hr {
   height: 1px;
 }
 .Item-1 {
-  padding-right:0 ;
+  padding-left:5% ;
   
   
 }
@@ -108,7 +109,8 @@ hr {
   background-color: #044ca4;
 }
 
-.profil{
-  align-content: center;
+#profil1{
+  
+  padding-left: 5%;
 }
 </style>
