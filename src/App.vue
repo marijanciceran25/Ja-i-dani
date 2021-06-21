@@ -1,43 +1,50 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
+import { firebase } from "@/firebase";
+import router from "@/router";
+import store from "@/store";
+import { db } from "@/firebase";
 
-import store from '@/store';
-import {firebase} from '@/firebase';
-import router from '@/router';
-
-
-firebase.auth().onAuthStateChanged((user) => {
+firebase.auth().onAuthStateChanged(function(user) {
   const currentRoute = router.currentRoute;
-  if (user) {
-    //Korisnik je ulogiran.
-    console.log("***", user.email);
-    store.currentUser = user.email;
-  } 
-  else {
-    //Korisnik nije ulogiran.
-    console.log('*** No user');
-    store.currentUser = null;
+  console.log("Trenutna ruta", currentRoute);
 
-     if (currentRoute.meta.needsUser) {
-      router.push({name: 'Sign_in'});
-    }
+  if (user) {
+    store.currentUser = user.email;
+    //console.log(user);
+
+    db.collection("korisnici")
+      .doc(user.email)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          //console.log("Document data:", doc.data());
+        } else {
+          // doc.data() will be undefined in this case
+          console.log("No such document!");
+        }
+      });
+
+    // User is signed in.
+  } else {
+    // No user is signed in.
+    store.currentUser = null;
   }
 });
 
 export default {
   name: "App.vue",
-  data(){
-    return{
+  data() {
+    return {
       store,
     };
   },
-}
-
+};
 </script>
 
 <style>

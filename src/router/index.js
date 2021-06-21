@@ -15,15 +15,14 @@ import Moj_Profil from "@/views/Mojprofil.vue";
 import store from "@/store";
 Vue.use(VueRouter);
 
-
 const routes = [
   {
     path: "/home",
     name: "Home",
     component: Home,
     meta: {
-      needsUser: true
-    }
+      needsUser: true,
+    },
   },
 
   {
@@ -31,82 +30,82 @@ const routes = [
     name: "Rojc",
     component: Rojc,
     meta: {
-      needsUser: true
-    }
+      needsUser: true,
+    },
   },
   {
     path: "/karolina",
     name: "Karolina",
     component: Karolina,
     meta: {
-      needsUser: true
-    }
-  }, 
+      needsUser: true,
+    },
+  },
   {
     path: "/trznica",
     name: "Trznica",
     component: Trznica,
     meta: {
-      needsUser: true
-    }
+      needsUser: true,
+    },
   },
   {
     path: "/dobriceva",
     name: "Dobriceva",
     component: Dobriceva,
     meta: {
-      needsUser: true
-    }
-  },  
+      needsUser: true,
+    },
+  },
   {
     path: "/bolnica",
     name: "Bolnica",
     component: Bolnica,
     meta: {
-      needsUser: true
-    }
-  },  
+      needsUser: true,
+    },
+  },
   {
     path: "/karta",
     name: "Karta",
     component: Karta,
     meta: {
-      needsUser: true
-    }
-  },  
+      needsUser: true,
+    },
+  },
   {
     path: "/kalkulator",
     name: "Kalkulator",
     component: Kalkulator,
     meta: {
-      needsUser: true
-    }
+      needsUser: true,
+    },
   },
   {
     path: "/obavijesti",
     name: "Obavijesti",
     component: Obavijesti,
     meta: {
-      needsUser: true
-    }
-  },  
+      needsUser: true,
+    },
+  },
   {
     path: "/sign_up",
     name: "Sign_up",
-    component: Sign_up
+    component: Sign_up,
   },
   {
     path: "/",
     name: "Sign_in",
-    component: Sign_in
+    component: Sign_in,
   },
   {
     path: "/moj_profil",
     name: "Moj_profil",
     component: Moj_Profil,
     meta: {
-      needsUser: true
-    }
+      needsUser: true,
+    },
   },
 ];
 
@@ -117,7 +116,14 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  console.log("Stara ruta", from.name, "Nova ruta", to.name, "korisnik", store.currentUser)
+  console.log(
+    "Stara ruta",
+    from.name,
+    "Nova ruta",
+    to.name,
+    "korisnik",
+    store.currentUser
+  );
 
   next();
 });
