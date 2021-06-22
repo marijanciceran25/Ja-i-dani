@@ -199,11 +199,12 @@ margin: 0%;
 }
 
 
+
 div.card {
     background-color: #044ca4 !important;
     color: white !important;
     border-radius: 10px;
-    width:900px;
+    width:auto;
     height: 770px;
    
     
@@ -216,11 +217,7 @@ div.card {
     color: aliceblue;
 }
 
-.form-group3 {
-    margin-left: 10%;
-    margin-right: 10%;
 
-}
 
 
 .usporedba {

@@ -21,7 +21,7 @@
             </div>
             <br>
            <br>
-            <div class="form-group4">
+            <div class="form-group3">
                 <input 
                     type="password"
                     v-model="password"
@@ -135,20 +135,16 @@ div.form_group1 {
 div.card {
    
     border-radius: 10px;
-    max-width:100%;
-    width: 900px;
+    width: auto;
     
     
 }
 
 
-.form-group4 {
-    margin-left: 12%;
-    margin-right: 12%;
-}
+
 .form-group3 {
-    margin-left: 12%;
-    margin-right: 12%;
+   margin-left: 30%;
+   margin-right: 30%;
 }
 
 
