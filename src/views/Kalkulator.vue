@@ -24,7 +24,7 @@
       </b-card-header>
       <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
         <b-card-body>
-         <b-card-text>Cijena: 8 Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 08:00 - 21:00 <br> Sub: 10:00-21:00 <br> Ned: 11:00-21:00 </b-card-text>
+         <b-card-text>Cijena: {{form.rojc}} Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 08:00 - 21:00 <br> Sub: 10:00-21:00 <br> Ned: 11:00-21:00 </b-card-text>
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected" :options="options">
             <template #first>
@@ -42,7 +42,7 @@
       </b-card-header>
       <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
         <b-card-body>
-        <b-card-text>Cijena: 10 Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 09:00 - 21:00 <br> Sub: 08:00-22:00 <br> Ned: 10:00-22:00 </b-card-text>
+        <b-card-text>Cijena: {{form.karolina}} Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 09:00 - 21:00 <br> Sub: 08:00-22:00 <br> Ned: 10:00-22:00 </b-card-text>
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected2" :options="options2">
             <template #first>
@@ -60,7 +60,7 @@
       </b-card-header>
       <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
         <b-card-body>
-         <b-card-text>Cijena: 8 Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 09:00 - 21:00 <br> Sub: 10:00-21:00 <br> Ned: 10:00-20:00 </b-card-text>
+         <b-card-text>Cijena: {{form.trznica}} Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 09:00 - 21:00 <br> Sub: 10:00-21:00 <br> Ned: 10:00-20:00 </b-card-text>
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected3" :options="options3">
             <template #first>
@@ -78,7 +78,7 @@
       </b-card-header>
       <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
         <b-card-body>
-         <b-card-text>Cijena: 9 Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 09:00 - 20:00 <br> Sub: 08:00-20:00 <br> Ned: 10:00-20:00 </b-card-text>
+         <b-card-text>Cijena: {{form.dobriceva}} Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 09:00 - 20:00 <br> Sub: 08:00-20:00 <br> Ned: 10:00-20:00 </b-card-text>
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected4" :options="options4">
             <template #first>
@@ -96,7 +96,7 @@
       </b-card-header>
       <b-collapse id="accordion-5" accordion="my-accordion" role="tabpanel">
         <b-card-body>
-          <b-card-text>Cijena: 8 Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 08:00 - 20:00 <br> Sub: 09:00-21:00 <br> Ned: 11:00-21:00 </b-card-text>
+          <b-card-text>Cijena: {{form.bolnica}} Kn/h  <br> Radno vrijeme: <br> Pon-Pet: 08:00 - 20:00 <br> Sub: 09:00-21:00 <br> Ned: 11:00-21:00 </b-card-text>
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected5" :options="options5">
             <template #first>
@@ -131,7 +131,39 @@
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
 
-const ljetna = 50;
+var dnevna = '';
+
+var GivenDate = '2021-06-01';
+var GivenDate2 = '2021-09-01';
+var CurrentDate = new Date();
+GivenDate = new Date(GivenDate);
+GivenDate2 = new Date(GivenDate2);
+
+var rojc ='';
+var karolina ='';
+var trznica ='';
+var dobriceva ='';
+var bolnica ='';
+
+if (CurrentDate >= GivenDate && CurrentDate <= GivenDate2){
+    console.log("Ljetno računanje cijena");
+    rojc = 8;
+    karolina = 10;
+    trznica = 8;
+    dobriceva = 9;
+    bolnica = 8; 
+    dnevna = 50;
+}
+  else if (CurrentDate >= GivenDate2 && CurrentDate <= GivenDate) {
+    console.log("Zimsko računanje cijena");
+    rojc = 6;
+    karolina = 6;
+    trznica = 7;
+    dobriceva = 7;
+    bolnica = 5; 
+    dnevna = 40;
+}
+else ( alert("Greska u racunanju datuma.") )
 
   export default {
     components: {
@@ -143,51 +175,56 @@ const ljetna = 50;
         form: {
         quantity: null,
         total: null,
+        rojc: rojc,
+        karolina: karolina,
+        trznica: trznica,
+        dobriceva: dobriceva,
+        bolnica: bolnica
       },
         selected: null,
         options: [
-          { value: '8', text: '1 sat' },
-          { value: '16', text: '2 sata' },
-          { value: '24', text: '3 sata' },
-          { value: '30', text: '4 sata' },
-          { value: '38', text: '5 sati' },
-          { value: ljetna, text: 'više od 5 sati' },
+          { value: rojc, text: '1 sat' },
+          { value: rojc*2, text: '2 sata' },
+          { value: rojc*3, text: '3 sata' },
+          { value: rojc*4, text: '4 sata' },
+          { value: rojc*5, text: '5 sati' },
+          { value: dnevna, text: 'više od 5 sati' },
         ],
         selected2: null,
         options2: [
-          { value: '10', text: '1 sat' },
-          { value: '20', text: '2 sata' },
-          { value: '30', text: '3 sata' },
-          { value: '40', text: '4 sata' },
-          { value: '50', text: '5 sati' },
-          { value: ljetna, text: 'više od 5 sati' },
+          { value: karolina, text: '1 sat' },
+          { value: karolina*2, text: '2 sata' },
+          { value: karolina*3, text: '3 sata' },
+          { value: karolina*4, text: '4 sata' },
+          { value: karolina*5, text: '5 sati' },
+          { value: dnevna, text: 'više od 5 sati' },
         ],
         selected3: null,
         options3: [
-          { value: '8', text: '1 sat' },
-          { value: '16', text: '2 sata' },
-          { value: '24', text: '3 sata' },
-          { value: '30', text: '4 sata' },
-          { value: '38', text: '5 sati' },
-          { value: ljetna, text: 'više od 5 sati' },
+          { value: trznica, text: '1 sat' },
+          { value: trznica*2, text: '2 sata' },
+          { value: trznica*3, text: '3 sata' },
+          { value: trznica*4, text: '4 sata' },
+          { value: trznica*5, text: '5 sati' },
+          { value: dnevna, text: 'više od 5 sati' },
         ],
         selected4: null,
         options4: [
-          { value: '9', text: '1 sat' },
-          { value: '18', text: '2 sata' },
-          { value: '27', text: '3 sata' },
-          { value: '36', text: '4 sata' },
-          { value: '45', text: '5 sati' },
-          { value: ljetna, text: 'više od 5 sati' },
+          { value: dobriceva, text: '1 sat' },
+          { value: dobriceva*2, text: '2 sata' },
+          { value: dobriceva*3, text: '3 sata' },
+          { value: dobriceva*4, text: '4 sata' },
+          { value: dobriceva*5, text: '5 sati' },
+          { value: dnevna, text: 'više od 5 sati' },
         ],
         selected5: null,
         options5: [
-          { value: '8', text: '1 sat' },
-          { value: '16', text: '2 sata' },
-          { value: '24', text: '3 sata' },
-          { value: '30', text: '4 sata' },
-          { value: '38', text: '5 sati' },
-          { value: ljetna, text: 'više od 5 sati' },
+          { value: bolnica, text: '1 sat' },
+          { value: bolnica*2, text: '2 sata' },
+          { value: bolnica*3, text: '3 sata' },
+          { value: bolnica*4, text: '4 sata' },
+          { value: bolnica*5, text: '5 sati' },
+          { value: dnevna, text: 'više od 5 sati' },
         ]
       }
     },
@@ -198,7 +235,7 @@ const ljetna = 50;
           if(unos==1 || unos>365) 
             {alert('Krivi unos, molimo Vas unesite broj između 2 i 365.')}
           else 
-            { this.form.total = unos * ljetna}
+            { this.form.total = unos * dnevna}
         }
         else {{alert('Krivi unos, usesen je negativan broj ili 0')}}
   }
