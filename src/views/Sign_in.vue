@@ -143,8 +143,8 @@ div.card {
 
 
 .form-group3 {
-   margin-left: 30%;
-   margin-right: 30%;
+   margin-left: 20%;
+   margin-right: 20%;
 }
 
 
