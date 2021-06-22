@@ -116,7 +116,7 @@ div.form_group1 {
 
 .form_group2 {
    
-   margin-left: 26%;
+   margin-left: 460px;
 
 
 }
