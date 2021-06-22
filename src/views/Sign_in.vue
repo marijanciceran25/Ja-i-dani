@@ -3,6 +3,7 @@
         <div class="form_group1">
            <Navsignup></Navsignup>
            <div class="form_group2">
+            <center>   
             <b-card id="sign">
             <h2>Prijava</h2>
             <br>
@@ -38,6 +39,7 @@
             <br>
             <b-button href="/sign_up">Nemate račun? Registrirajte se.</b-button>
             </b-card>
+            </center>
            </div>
         </div>
         
@@ -116,7 +118,7 @@ div.form_group1 {
 
 .form_group2 {
    
-   margin-left: 460px;
+   margin: 0%;
 
 
 }
@@ -134,7 +136,7 @@ div.card {
    
     border-radius: 10px;
     max-width:100%;
-    width: 1000px;
+    width: 900px;
     
     
 }

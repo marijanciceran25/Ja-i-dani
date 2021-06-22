@@ -1,9 +1,9 @@
 <template>
         <div class="form_group1">
            <Navsignup></Navsignup>
-           
            <div class="form_group2">
             <form>
+            <center>
             <b-card>
             <h2>Registracija</h2>
             <br>
@@ -71,11 +71,13 @@
             <br>
             <b-button class="btn2" href="/">Već imam račun</b-button>
             </b-card>
+            </center>
             </form>
            </div>
           
         <Footer></Footer>
         </div>
+
 </template>
 
 <script>
@@ -189,12 +191,11 @@ div.form_group1 {
     border: none;
     background-color:rgb(63, 60, 60);
     height: 890px !important;
-    
 }
 
 .form_group2 {
-  margin-left: 460px;
-
+margin: 0%;
+  
 }
 
 
@@ -202,8 +203,9 @@ div.card {
     background-color: #044ca4 !important;
     color: white !important;
     border-radius: 10px;
-    width:1000px;
+    width:900px;
     height: 770px;
+   
     
 }
 
@@ -220,11 +222,7 @@ div.card {
 
 }
 
-.form-group5 {
-    margin-left: 30%;
-    margin-right: 30%;
 
-}
 .usporedba {
     color: red;
     font-size: 15px;
@@ -232,9 +230,7 @@ div.card {
     margin-left: 60%;
     
 }
-.label1 {
-    margin-left: 0%;
-}
+
 
 .po-password-strength-bar {
   border-radius: 2px;
