@@ -1,7 +1,7 @@
 <template>
         <div class="form_group1">
            <Navsignup></Navsignup>
-           <br>
+           
            <div class="form_group2">
             <form>
             <b-card>
@@ -27,7 +27,7 @@
                     <label for="exampleInputSurname1">Prezime</label>
             </div>
             <br>
-            <div class="form-group5">
+            <div class="form-group3">
                 <input 
                     type="text"
                     v-model="username"
@@ -73,7 +73,7 @@
             </b-card>
             </form>
            </div>
-           <br>
+          
         <Footer></Footer>
         </div>
 </template>
@@ -187,13 +187,14 @@ export default {
 
 div.form_group1 {
     border: none;
-    background-color: transparent;
-    height: 500px !important;
+    background-color:rgb(63, 60, 60);
+    height: 890px !important;
+    
 }
 
 .form_group2 {
-   margin-left: 30%;
-   margin-right: 30%;
+  margin-left: 26%;
+
 }
 
 
@@ -201,20 +202,21 @@ div.card {
     background-color: #044ca4 !important;
     color: white !important;
     border-radius: 10px;
-    max-width:1000%;
-    height: 750px !important;
+    width:1000px;
+    height: 770px;
+    
 }
- .col {
-    padding-left: 0%;
- }
+
+
+
 
 .signup {
     color: aliceblue;
 }
 
 .form-group3 {
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
 
 }
 
@@ -260,7 +262,6 @@ div.card {
 .po-password-strength-bar.secure {
   background-color: #35cc62;
 }
-
 
 
 </style>

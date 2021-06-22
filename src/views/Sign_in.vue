@@ -2,16 +2,16 @@
 <div>
         <div class="form_group1">
            <Navsignup></Navsignup>
-           <br>
            <div class="form_group2">
             <b-card id="sign">
             <h2>Prijava</h2>
             <br>
             <br>
+
             <div class="form-group3">
                 <input 
                     type="email" 
-                    v-model="email" 
+                    v-model="username" 
                     class="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp" 
@@ -40,7 +40,7 @@
             </b-card>
            </div>
         </div>
-        <br>
+        
     <Footer></Footer>
 
 </div>
@@ -53,8 +53,6 @@
 import Navsignup from '../components/Navsignup.vue';
 import Footer from '@/components/Footer.vue';
 import {firebase} from '@/firebase';
-import {db} from '@/firebase';
-import store from "@/store";
 
 export default {
     name1: 'Sign_in',
@@ -65,23 +63,17 @@ export default {
     
     data() {
         return {
-            email:"",
+            username:"",
             password:""
+            
         }
     },
     methods: {
         login() {
-            console.log("login..." + this.email);
+            console.log("login..." + this.username);
             console.log(this.$router);
-            firebase
-            .auth()
-            .signInWithEmailAndPassword(this.email, this.password)
+            firebase.auth().signInWithEmailAndPassword(this.username, this.password)
             .then((result)=> {
-                store.id = this.email
-
-                db.collection("korisnici")
-            .doc(store.id)
-
                 console.log('Uspješna prijava', result);
                 this.$router.replace({name: 'Home'});
             })
@@ -90,38 +82,42 @@ export default {
                 var errorCode = e.code;
                 var errorMessage = e.message;
                 if (errorCode === 'auth/wrong-password') {
-                    alert('Kriva lozinka.');
-                } 
-                else if (errorCode === 'auth/invalid-email') {
-                    alert('Krivi e-mail.');
-                } 
-                else if (errorCode === 'auth/user-not-found') {
-                    alert('Ne postoji korisnik povezan sa ovim podacima. Korisnički profil je možda obrisan.');
-                } 
-                else {
+                    alert('Upisite ispravnu lozinku.');
+                } else {
                  alert(errorMessage);
                 }
                 console.log(e);
+                
             });
-        },
-    },
+        }
+       
+        
+         
+
+      
+    }
+    
     
 };
 </script>
 
 
-<style scoped>
+<style>
 div.form_group1 {
     
     border: none;
-    background-color:white;
-    height: auto;
+    background-color:rgb(63, 60, 60);
+    height: 666px;
+    align-items: center;
+   
+    
     
 }
 
 .form_group2 {
-   margin-left: 30%;
-   margin-right: 30%;
+   
+   margin-left: 26%;
+
 
 }
 
@@ -130,18 +126,19 @@ div.form_group1 {
     color: aliceblue;
     height: 600px;
     border-radius: 10px;
+    align-self: center;
+   
 }
 
 div.card {
    
     border-radius: 10px;
     max-width:100%;
+    width: 1000px;
+    
     
 }
 
-.signin {
-    color: aliceblue;
-}
 
 .form-group4 {
     margin-left: 12%;
@@ -151,4 +148,7 @@ div.card {
     margin-left: 12%;
     margin-right: 12%;
 }
+
+
+ 
 </style>

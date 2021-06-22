@@ -80,7 +80,7 @@ export default {
 .stil{
   background-color:#044ca4 !important;
   width: 100%;
-  height: 7%;
+  height: 8%;
 
 }
 
