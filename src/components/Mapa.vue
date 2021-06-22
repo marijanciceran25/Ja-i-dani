@@ -102,6 +102,7 @@ export default {
     },
     clearMap() {
       this.markers = [];
+      this.window_open = false;
     },
   },
 };

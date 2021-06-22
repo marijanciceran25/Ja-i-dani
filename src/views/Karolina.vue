@@ -58,20 +58,14 @@
   </b-row>
   <br>
    <b-row>
-    <h4><b>Slobodna mjesta: </b></h4>
+    <h4><b>Ukupno mjesta: </b></h4>
    </b-row>
    <hr>
    <b-row>
     <p>Ukupno: 50</p>
   </b-row>
      <b-row>
-    <p>Slobodno: 39</p>
-  </b-row>
-     <b-row>
     <p>Invalidskih: 10</p>
-  </b-row>
-     <b-row>
-    <p>Slob. Invalidskih: 8</p>
   </b-row>
   <br>
 </b-container>

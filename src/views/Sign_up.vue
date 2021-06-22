@@ -147,12 +147,16 @@ export default {
 
                 console.log('Uspješna registracija');
                 alert("Dobro došli! ");
+                this.$router.push({name: "Sign_in"});
                 }
             )
             .catch(function(error) {
                 var errorCode = error.code;
                 if (errorCode === 'auth/email-already-in-use') {
                     alert('Ovaj račun se već koristi!');
+                }
+                else if (errorCode === 'auth/weak-password') {
+                    alert('Lozinka mora sadržavati minimalno 6 znakova!');
                 }
                 else { 
                 console.error("Došlo je do greške", error),

@@ -8,7 +8,6 @@
             <h2>Prijava</h2>
             <br>
             <br>
-
             <div class="form-group3">
                 <input 
                     type="email" 

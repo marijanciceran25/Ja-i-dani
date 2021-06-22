@@ -28,7 +28,7 @@
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected" :options="options">
             <template #first>
-            <b-form-select-option :value="null" disabled>-- Molimo odaberite jednu od opcija --</b-form-select-option>
+            <b-form-select-option :value="null">-- Molimo odaberite jednu od opcija --</b-form-select-option>
             </template>
             </b-form-select>
             <div class="mt-3">Konacna cijena: <strong>{{ selected }}  Kn </strong></div>
@@ -46,7 +46,7 @@
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected2" :options="options2">
             <template #first>
-            <b-form-select-option :value="null" disabled>-- Molimo odaberite jednu od opcija --</b-form-select-option>
+            <b-form-select-option :value="null">-- Molimo odaberite jednu od opcija --</b-form-select-option>
             </template>
             </b-form-select>
             <div class="mt-3">Konacna cijena: <strong>{{ selected2 }}  Kn </strong></div>
@@ -64,7 +64,7 @@
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected3" :options="options3">
             <template #first>
-            <b-form-select-option :value="null" disabled>-- Molimo odaberite jednu od opcija --</b-form-select-option>
+            <b-form-select-option :value="null">-- Molimo odaberite jednu od opcija --</b-form-select-option>
             </template>
             </b-form-select>
             <div class="mt-3">Konacna cijena: <strong>{{ selected3 }}  Kn </strong></div>
@@ -82,7 +82,7 @@
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected4" :options="options4">
             <template #first>
-            <b-form-select-option :value="null" disabled>-- Molimo odaberite jednu od opcija --</b-form-select-option>
+            <b-form-select-option :value="null">-- Molimo odaberite jednu od opcija --</b-form-select-option>
             </template>
             </b-form-select>
             <div class="mt-3">Konacna cijena: <strong>{{ selected4 }}  Kn </strong></div>
@@ -100,7 +100,7 @@
           <b-card-text>Ovdje odaberite vrijeme provedeno na parkingu: </b-card-text>
             <b-form-select v-model="selected5" :options="options5">
             <template #first>
-            <b-form-select-option :value="null" disabled>-- Molimo odaberite jednu od opcija --</b-form-select-option>
+            <b-form-select-option :value="null">-- Molimo odaberite jednu od opcija --</b-form-select-option>
             </template>
             </b-form-select>
             <div class="mt-3">Konacna cijena: <strong>{{ selected5 }}  Kn </strong></div>
@@ -133,7 +133,6 @@ import Footer from '@/components/Footer.vue';
 
 const ljetna = 50;
 
-
   export default {
     components: {
       Navbar,
@@ -152,7 +151,7 @@ const ljetna = 50;
           { value: '24', text: '3 sata' },
           { value: '30', text: '4 sata' },
           { value: '38', text: '5 sati' },
-          { value: ljetna, text: 'Dnevna ljetna' },
+          { value: ljetna, text: 'više od 5 sati' },
         ],
         selected2: null,
         options2: [
@@ -161,7 +160,7 @@ const ljetna = 50;
           { value: '30', text: '3 sata' },
           { value: '40', text: '4 sata' },
           { value: '50', text: '5 sati' },
-          { value: ljetna, text: 'Dnevna ljetna' },
+          { value: ljetna, text: 'više od 5 sati' },
         ],
         selected3: null,
         options3: [
@@ -170,7 +169,7 @@ const ljetna = 50;
           { value: '24', text: '3 sata' },
           { value: '30', text: '4 sata' },
           { value: '38', text: '5 sati' },
-          { value: ljetna, text: 'Dnevna ljetna' },
+          { value: ljetna, text: 'više od 5 sati' },
         ],
         selected4: null,
         options4: [
@@ -179,7 +178,7 @@ const ljetna = 50;
           { value: '27', text: '3 sata' },
           { value: '36', text: '4 sata' },
           { value: '45', text: '5 sati' },
-          { value: ljetna, text: 'Dnevna ljetna' },
+          { value: ljetna, text: 'više od 5 sati' },
         ],
         selected5: null,
         options5: [
@@ -188,7 +187,7 @@ const ljetna = 50;
           { value: '24', text: '3 sata' },
           { value: '30', text: '4 sata' },
           { value: '38', text: '5 sati' },
-          { value: ljetna, text: 'Dnevna ljetna' },
+          { value: ljetna, text: 'više od 5 sati' },
         ]
       }
     },

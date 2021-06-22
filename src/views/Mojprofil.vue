@@ -7,8 +7,8 @@
       <br />
       <br />
       <center>
-        <h2>Informacije o profilu</h2>
-        <label class="mt-4">Email</label>
+        <b><h2>Informacije o profilu</h2></b>
+        <label class="mt-4">E-Mail</label>
         <p class="form-control" id="frm-ctrl">{{ Korisnik.username }}</p>
         <label class="mt-4">Ime</label>
         <p class="form-control" id="frm-ctrl">{{ Korisnik.ime }}</p>
@@ -84,6 +84,7 @@ div.card {
 
 #frm-ctrl{
     max-width: 400px;
+    border: 2px solid black;
 }
 
 </style>
