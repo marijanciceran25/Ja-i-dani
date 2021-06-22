@@ -14,7 +14,7 @@
       <gmap-info-window
         @closeclick="window_open = false"
         :opened="window_open"
-        :position="markers.position"
+        :position="infowindow.position"
         :options="{
           pixelOffset: {
             width: 0,
@@ -22,7 +22,7 @@
           },
         }"
       >
-        <router-link :to="{ path: markers.route }">Klikni me</router-link>
+        <router-link :to="{ path: infowindow.route }">Klikni me</router-link>
       </gmap-info-window>
       <GmapMarker
         :v-if="mapLoaded"
@@ -31,7 +31,7 @@
         :position="m.position"
         :clickable="true"
         :label="m.label"
-        @click="openWindow(m, index)"
+        @click="openWindow(m)"
       />
     </GmapMap>
   </div>
@@ -50,7 +50,9 @@ export default {
     return {
       markers: [],
       center: trznica,
-      infowindow: null,
+      infowindow: {
+        position: { lat: 0, lng: 0 },
+      },
       window_open: false,
       mapLoaded: false,
     };
@@ -61,7 +63,10 @@ export default {
   },
 
   methods: {
-    openWindow() {
+    openWindow(m) {
+      // console.log(m);
+      this.infowindow = m;
+      //console.log(this.infowindow.route);
       this.window_open = true;
     },
 
