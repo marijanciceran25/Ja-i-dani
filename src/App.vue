@@ -12,9 +12,9 @@ import { db } from "@/firebase";
 
 firebase.auth().onAuthStateChanged(function(user) {
   const currentRoute = router.currentRoute;
-  console.log("Trenutna ruta", currentRoute);
 
   if (user) {
+    // User is signed in.
     store.currentUser = user.email;
     //console.log(user);
 
@@ -29,11 +29,13 @@ firebase.auth().onAuthStateChanged(function(user) {
           console.log("No such document!");
         }
       });
-
-    // User is signed in.
   } else {
     // No user is signed in.
     store.currentUser = null;
+
+    if (currentRoute.meta.needsUser) {
+      router.push({ name: 'Sign_in'})
+    }
   }
 });
 
