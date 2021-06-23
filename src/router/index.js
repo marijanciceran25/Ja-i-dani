@@ -12,7 +12,7 @@ import Obavijesti from "@/views/Obavijesti.vue";
 import Sign_up from "@/views/Sign_up.vue";
 import Sign_in from "@/views/Sign_in.vue";
 import Moj_Profil from "@/views/Mojprofil.vue";
-import store from "@/store";
+import { firebase } from "@/firebase";
 Vue.use(VueRouter);
 
 const routes = [
@@ -20,92 +20,74 @@ const routes = [
     path: "/home",
     name: "Home",
     component: Home,
-    meta: {
-      needsUser: true,
-    },
+    meta: { requiresAuth: true },
   },
 
   {
     path: "/rojc",
     name: "Rojc",
     component: Rojc,
-    meta: {
-      needsUser: true,
-    },
+    meta: { requiresAuth: true },
   },
   {
     path: "/karolina",
     name: "Karolina",
     component: Karolina,
-    meta: {
-      needsUser: true,
-    },
+    meta: { requiresAuth: true },
   },
   {
     path: "/trznica",
     name: "Trznica",
     component: Trznica,
-    meta: {
-      needsUser: true,
-    },
+    meta: { requiresAuth: true },
   },
   {
     path: "/dobriceva",
     name: "Dobriceva",
     component: Dobriceva,
-    meta: {
-      needsUser: true,
-    },
+    meta: { requiresAuth: true },
   },
   {
     path: "/bolnica",
     name: "Bolnica",
     component: Bolnica,
-    meta: {
-      needsUser: true,
-    },
+    meta: { requiresAuth: true },
   },
   {
     path: "/karta",
     name: "Karta",
     component: Karta,
-    meta: {
-      needsUser: true,
-    },
+    meta: { requiresAuth: true },
   },
   {
     path: "/kalkulator",
     name: "Kalkulator",
     component: Kalkulator,
-    meta: {
-      needsUser: true,
-    },
+    meta: { requiresAuth: true },
   },
   {
     path: "/obavijesti",
     name: "Obavijesti",
     component: Obavijesti,
-    meta: {
-      needsUser: true,
-    },
+    meta: { requiresAuth: true },
   },
   {
     path: "/sign_up",
     name: "Sign_up",
     component: Sign_up,
+    meta: { logged: true },
   },
   {
     path: "/",
     name: "Sign_in",
     component: Sign_in,
+    meta: { logged: true },
   },
   {
     path: "/moj_profil",
     name: "Moj_profil",
     component: Moj_Profil,
-    meta: {
-      needsUser: true,
-    },
+    meta: { requiresAuth: true },
   },
 ];
 
@@ -116,15 +98,20 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  console.log( "Stara ruta", from.name, " -> ", to.name, ", korisnik", store.currentUser);
+  const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
+  const logged = to.matched.some((record) => record.meta.logged);
+  const currentUser = firebase.auth().currentUser;
 
-  const noUser = store.currentUser === null;
+  if (requiresAuth && !currentUser) {
+    next("/");
+  } else if (requiresAuth && currentUser) {
+    next();
+  }
 
-  if (noUser && to.meta.needsUser) {
-    next("/")
+  if (logged && currentUser) {
+    next("home");
   } else {
     next();
   }
 });
-
 export default router;
