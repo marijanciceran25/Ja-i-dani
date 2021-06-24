@@ -60,7 +60,7 @@
                     class="form-control"
                     id="exampleInputPassword2"
                     placeholder="Ponovite lozinku"/>
-                    <strong><label class="usporedba" for="passwordnotmatching">{{comparePasswords}}</label></strong>
+                    <strong><label class="usporedba">{{comparePasswords}}</label></strong>
                     <br>
                     <label class="label1" for="exampleInputPassword2">Ponovite lozinku</label>   
                                    

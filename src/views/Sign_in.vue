@@ -84,7 +84,7 @@ export default {
                 var errorCode = e.code;
                 var errorMessage = e.message;
                 if (errorCode === 'auth/wrong-password') {
-                    alert('Upisite ispravnu lozinku.');
+                    alert('Upišite ispravnu lozinku.');
                 } else {
                  alert(errorMessage);
                 }
